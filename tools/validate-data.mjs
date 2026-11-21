@@ -100,6 +100,16 @@ for (const f of [d.model.src, d.model.poster, ...d.swatches.map(s => s.file)]) i
 const media = new Set(d.mediaAssets.map(m => m.id));
 d.scrollSteps.forEach(s => (s.media || []).forEach(id => { if (!media.has(id)) errors.push(`step ${s.eventId}: image ${id} not in the archive`); }));
 
+/* the model must be loadable by the pinned model-viewer (4.0.0): Meshopt-compressed files fail to load there */
+try {
+  const glb = fs.readFileSync(path.join(root, d.model.src));
+  const jsonLen = glb.readUInt32LE(12);
+  const gj = JSON.parse(glb.subarray(20, 20 + jsonLen).toString('utf8'));
+  const req = gj.extensionsRequired || [];
+  if (req.includes('EXT_meshopt_compression')) errors.push(`${d.model.src} requires EXT_meshopt_compression, which model-viewer 4.0.0 cannot load (use Draco: gltf-transform optimize --compress draco)`);
+  if (!(gj.extensions && gj.extensions.KHR_materials_variants)) warnings.push(`${d.model.src} has no KHR_materials_variants: the stone / printed switch will not work`);
+} catch (e) { errors.push(`could not read ${d.model.src} as a GLB: ${e.message}`); }
+
 /* nothing local in what ships */
 const shipped = [src, fs.readFileSync(path.join(root, 'index.html'), 'utf8'), fs.readFileSync(path.join(root, 'js/app.js'), 'utf8'), fs.readFileSync(path.join(root, 'css/styles.css'), 'utf8')];
 shipped.forEach((t, i) => { if (/\/Users\/|\/private\/tmp|C:\\Users/.test(t)) errors.push(`a local file path appears in ${['data.js', 'index.html', 'app.js', 'styles.css'][i]}`); });

@@ -2239,7 +2239,7 @@ window.printData = {
   ],
 
   model: {
-    src: "assets/models/priest-king.glb",
+    src: "assets/models/priest-king-draco.glb",
     poster: "assets/video/hero-poster.jpg",
     variants: ["stone", "printed"]
   }

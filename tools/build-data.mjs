@@ -24,6 +24,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 import editorial from './editorial.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -145,7 +146,7 @@ const data = {
   ledger: E.ledger.map(r => ({ ...r, source: mergeSources(r.source) })),
   claims: E.claims.map(c => ({ ...c, source: mergeSources(c.source) })),
   process, hotspots, swatches: E.swatches, blueThread, mediaAssets,
-  model: { src: 'assets/models/priest-king.glb', poster: 'assets/video/hero-poster.jpg', variants: ['stone', 'printed'] }
+  model: { src: 'assets/models/priest-king-draco.glb', poster: 'assets/video/hero-poster.jpg', variants: ['stone', 'printed'] }
 };
 
 /* ── serialise ───────────────────────────────────────────── */
@@ -179,3 +180,16 @@ fs.writeFileSync(path.join(root, 'js', 'data.js'), header + '\nwindow.printData 
 const size = (fs.statSync(path.join(root, 'js', 'data.js')).size / 1024).toFixed(0);
 console.log(`js/data.js: ${mapEvents.length} events, ${scrollSteps.length} steps, ${mediaAssets.length} images` +
   (pendingMedia.length ? ` (${pendingMedia.length} left out, file missing: ${pendingMedia.join(', ')})` : '') + `, ${size} KB`);
+
+/* ── cache-busting ───────────────────────────────────────────
+   GitHub Pages lets browsers cache files for ten minutes, so after a deploy a visitor can hold the
+   old data.js beside the new model (or the reverse). Stamp the three asset URLs in index.html with a
+   hash of their contents: a changed file gets a new URL. (Binary assets are renamed when they change.) */
+const stamp = crypto.createHash('sha1');
+for (const f of ['css/styles.css', 'js/app.js', 'js/data.js']) stamp.update(fs.readFileSync(path.join(root, f)));
+const v = stamp.digest('hex').slice(0, 8);
+const htmlPath = path.join(root, 'index.html');
+const html = fs.readFileSync(htmlPath, 'utf8');
+const stamped = html.replace(/(css\/styles\.css|js\/data\.js|js\/app\.js)(\?v=[0-9a-f]+)?(?=")/g, `$1?v=${v}`);
+if (stamped !== html) fs.writeFileSync(htmlPath, stamped);
+console.log(`index.html asset version: ${v}`);

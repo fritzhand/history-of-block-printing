@@ -28,8 +28,8 @@ blender -b --factory-startup --python-exit-code 1 --python 3d/bl_build.py -- \
   --prefix 3d/work/final --variant stone --save-blend 3d/out/priest-king.blend --glb 3d/work/pk_base.glb
 python3 3d/glb_variants.py 3d/work/pk_base.glb 3d/out/priest-king.glb \
   3d/work/final_albedo_printed.jpg 3d/work/final_normal_printed.png
-npx @gltf-transform/cli optimize 3d/out/priest-king.glb assets/models/priest-king.glb \
-  --compress meshopt --texture-compress webp --texture-size 2048 --simplify false --join false --flatten false
+npx @gltf-transform/cli optimize 3d/out/priest-king.glb assets/models/priest-king-draco.glb \
+  --compress draco --texture-compress webp --texture-size 2048 --simplify false --join false --flatten false
 ```
 
 `3d/work/` (renders, hi-res arrays) is git-ignored. Blender 5.2: on this Mac, Cycles' Metal GPU kernel compile
@@ -40,5 +40,7 @@ crashed in the sandbox, so renders use `--cpu`; EEVEE is fine for the placeholde
 - Proportions come from photographs: expect errors of a few millimetres. The face is stylised, and the nose is
   broken as in the original.
 - The printed-cloth surface is an illustration. Its colours (madder red, indigo hem) are not found on the sculpture.
-- The glTF has been checked with the glTF validator (no errors) and against model-viewer 4.0.0's source (Meshopt,
-  WebP, material variants are supported). It has not been opened in a browser yet.
+- The glTF passes the glTF validator and was loaded in a real browser with model-viewer 4.0.0: **Draco + WebP + material
+  variants load; Meshopt does not** (it fails with "Cannot read properties of undefined (reading 'scene')"), so the
+  shipped file uses Draco. Finding this took a failure on a phone; a search of the library's source for "Meshopt"
+  was not a real test.

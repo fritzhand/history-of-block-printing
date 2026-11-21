@@ -10,12 +10,12 @@
 | Research layer | **first pass** | 22 mapped events, 6 carried from the indigo study; 70 CONFIRMED, 5 PENDING, 6 DERIVED source objects, 24 institutions |
 | Quote verification | done | `tools/check-quotes.py` re-reads every CONFIRMED source; all pass (a wrong Quseir quote was caught and fixed) |
 | Data build and validator | done | `tools/build-data.mjs`, `tools/validate-data.mjs`: no errors |
-| 3D model | done | `assets/models/priest-king.glb` (2.8 MB, 345,600 triangles, stone + printed variants); glTF validator: no errors |
+| 3D model | done | `assets/models/priest-king-draco.glb` (2.8 MB, 345,600 triangles, stone + printed variants); glTF validator: no errors |
 | Hero video | **placeholder** | A 12 s Blender sweep (stone dissolving to printed cloth). The real reconstruction video is to be generated from `prompts/HERO_VIDEO_PROMPTS.md` |
 | Soundtrack | done | "Temple" by Jean du Voyage, rights confirmed by the owner 2026-11-21; terms to be recorded in `CONTENT_LICENSE.md` |
 | Picture archive | 25 images | 19 new (13 CC0, 6 Commons) + 6 carried from the indigo study. Adinkra cloth record present, file not yet mirrored (rate limit) |
 | Page (HTML / CSS / JS) | built | Hero, 3D viewer, ledger, process, timeline map, spread chart, blue thread, claims, archive, source audit |
-| Browser testing | **not done** | Simulated DOM only (jsdom + real Leaflet): all sections render, interactions respond, no errors. Chart.js is stubbed and model-viewer is not loaded there |
+| Browser testing | **partial** | Simulated DOM (jsdom + real Leaflet): all sections render, interactions respond, scroll assist passes ten checks. In a real browser (desktop Chromium): the 3D model loads, both surfaces render (stone 0% madder red, printed 8%), hotspots work. **Not yet checked: the phone layout, the map and chart in a real browser** |
 | Repo / publishing | **published** | Public repo `fritzhand/history-of-block-printing`, served by GitHub Pages from `main`. (Vercel was considered; the only scope the CLI could use was an employer's team, so Pages was chosen) |
 
 ## What the research found
@@ -35,6 +35,7 @@
 - "Gulati and Turner" as the Mohenjo-daro cotton's examiners was not confirmed; Marshall names James Turner.
 - The Adinkra date: the British Art Studies article gives the Bowdich objects as presented in 1818 (formally added 1831).
 - The Sketchfab Priest-King model is an AI generation (Tripo) with a tilted head; it is not used.
+- **The 3D model failed to load on a phone after launch.** I had shipped it Meshopt-compressed after checking only that model-viewer 4.0.0's source contained the word "Meshopt"; in a real browser it fails (`Cannot read properties of undefined (reading 'scene')`). Draco + WebP loads, with the variants, at 2.1 MB. The shipped file is now `priest-king-draco.glb` (a new name, because browsers had cached the old URL), `tools/validate-data.mjs` refuses a Meshopt GLB, and `build-data.mjs` stamps asset URLs so a stale cache can't pair old and new files.
 
 ## Next
 

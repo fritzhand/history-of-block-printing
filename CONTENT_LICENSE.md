@@ -23,7 +23,7 @@ textures, the soundtrack, and the third-party media the site displays.
 
 ## 3D model and textures
 
-- `assets/models/priest-king.glb`, `3d/out/priest-king.blend` and `assets/textures/*` were made for this
+- `assets/models/priest-king-draco.glb`, `3d/out/priest-king.blend` and `assets/textures/*` were made for this
   project, from published photographs and measurements of the sculpture and a generative script.
   They are released under CC BY 4.0. The model is **a measured interpretation, not a scan**, and its
   "printed cloth" surface illustrates a hypothesis. It does not reproduce, and is not derived from,

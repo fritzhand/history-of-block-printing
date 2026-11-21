@@ -15,7 +15,7 @@ const leaflet = fs.readFileSync(NM + '/leaflet/dist/leaflet.js', 'utf8');
 const data = fs.readFileSync(ROOT + '/js/data.js', 'utf8'), app = fs.readFileSync(ROOT + '/js/app.js', 'utf8');
 const stubs = `window.fetch = () => Promise.resolve({ ok: true });
 window.Chart = function (cv, cfg) { window.__chart = cfg; this.destroy = () => {}; this.update = () => {}; };`;
-const page = strip.replace('<script src="js/data.js"></script>', '').replace('<script src="js/app.js"></script>', '')
+const page = strip.replace(/<script src="js\/(?:data|app)\.js[^"]*"><\/script>/g, '')
   .replace('</body>', () => `<script>${stubs}</script><script>${leaflet.replace(/<\/script>/g, '<\\/script>')}</script><script>L.Browser.svg = true; L.Browser.canvas = false;</script><script>${data}</script><script>${app}</script></body>`);
 const errors = [], vc = new VirtualConsole();
 vc.on('jsdomError', e => errors.push('jsdomError: ' + String(e.message).split('\n')[0]));

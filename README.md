@@ -64,7 +64,7 @@ tools/build-data.mjs                 compiles it all into js/data.js
 
 ```bash
 python3 tools/check-quotes.py        # re-read every CONFIRMED source; needs beautifulsoup4, pdfminer.six, certifi
-node tools/build-data.mjs            # research + editorial -> js/data.js
+node tools/build-data.mjs            # research + editorial -> js/data.js; also stamps index.html's asset URLs with a content hash (cache-busting). Run before every deploy
 node tools/validate-data.mjs         # schema, eras, hero rule, files exist, no local paths
 python3 tools/mirror-media.py        # media-manifest.json -> media.json + assets/media/ (licence read per record)
 node tools/media-roll.mjs            # regenerate the media roll in CONTENT_LICENSE.md
@@ -77,7 +77,7 @@ npm i --no-save jsdom@24 leaflet@1.9.4 && node tools/smoke-test.mjs .   # run th
 ## The 3D model, the video and the prompts
 
 - `3d/` builds the model: a signed-distance base form, a baked normal map for the beard lines, hair, trefoils
-  and stone grain, Blender for materials and renders, glTF with material variants. See [`3d/README.md`](./3d/README.md).
+  and stone grain, Blender for materials and renders, glTF with material variants (Draco-compressed: model-viewer 4.0.0 cannot load Meshopt). See [`3d/README.md`](./3d/README.md).
 - `prompts/HERO_VIDEO_PROMPTS.md`: eight shots, each with an image prompt, a video prompt, an evidence tag and a
   soundtrack cue, for an image-to-video tool.
 - `prompts/3D_MODEL_PROMPTS.md`: prompts and a checklist for AI image-to-3D tools, and what went wrong in the
