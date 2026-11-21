@@ -66,6 +66,7 @@
     baseLayers.set(map, { base, label });
   }
   let storyMap, blueMap, spreadChart;
+  let storyActivate = null, storyLock = false, storyLockTimer = null, storyLockRelease = null;
   const storyMarkers = new Map(), blueMarkers = new Map();
 
   function applyTheme(theme) {
@@ -215,14 +216,14 @@
         (imgs.length ? '<div class="step-media">' + imgs.map(m => '<img src="' + esc(m.thumbUrl) + '" alt="' + esc(m.alt) + '" loading="lazy" />').join('') + '</div>' : '') +
         srcBlock(e.source) + '</div></article>';
     }).join('');
-    $$('.era-pill').forEach(p => p.addEventListener('click', () => { const t = $('.story-step[data-phase="' + p.dataset.era + '"]'); if (t) t.scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'center' }); }));
+    $$('.era-pill').forEach(p => p.addEventListener('click', () => { const t = $('.story-step[data-phase="' + p.dataset.era + '"]'); if (t) goToStep(t); }));
     if (!window.L) { $('#story-map').innerHTML = '<p class="muted" style="padding:20px">The map library could not be loaded.</p>'; return; }
     storyMap = L.map('story-map', { zoomControl: false, scrollWheelZoom: false, worldCopyJump: true }).setView(D.meta.mapCenter, 3);
     L.control.zoom({ position: 'bottomright' }).addTo(storyMap);
     addBasemap(storyMap);
     (D.mapEvents || []).forEach(e => {
       const m = L.circleMarker([e.lat, e.lng], markerStyle(e, false)).addTo(storyMap).bindPopup(popup(e));
-      m.on('click', () => { const t = $('.story-step[data-event="' + e.id + '"]'); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+      m.on('click', () => { const t = $('.story-step[data-event="' + e.id + '"]'); if (t) goToStep(t); });
       storyMarkers.set(e.id, m);
     });
     let activeId = null;
@@ -237,10 +238,16 @@
       $$('.era-pill').forEach(p => p.classList.toggle('is-active', p.dataset.era === e.phase));
       $('#nav-phase-indicator').innerHTML = '<span class="era-dot" style="background:' + eraColor(e.phase) + '"></span><span class="phase-name">' + esc(eraName(e.phase)) + '</span>';
     };
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) activate(en.target); }), { rootMargin: '-42% 0px -42% 0px' });
+    storyActivate = activate;
+    let io = null;
+    const buildObserver = () => {
+      if (!('IntersectionObserver' in window)) return;
+      if (io) io.disconnect();
+      io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting && !storyLock) activate(en.target); }), { rootMargin: storyRootMargin() });
       $$('.story-step').forEach(s => io.observe(s));
-    }
+    };
+    buildObserver();
+    let rmTimer; addEventListener('resize', () => { clearTimeout(rmTimer); rmTimer = setTimeout(buildObserver, 200); });
     activate($('.story-step'));
   }
 
@@ -331,11 +338,95 @@
       [].concat(e.source || []).map(s => '<span class="badge st-' + s.verificationStatus + '">' + s.verificationStatus + '</span>').join(' ') + '</summary><ul class="src-list">' + [].concat(e.source || []).map(srcItem).join('') + '</ul></details>').join('');
   }
 
+  /* ── scroll assist ──────────────────────────────────── */
+  const navH = () => (($('#main-nav') || {}).offsetHeight) || 56;
+  /* On a phone the map is sticky under the nav, so a story step must land below it. */
+  const stepOffset = el => {
+    if (el.classList && el.classList.contains('story-step') && innerWidth <= 900) { const m = $('.story-map-wrap'); return navH() + (m ? m.offsetHeight : 0) + 14; }
+    return navH() + 8;
+  };
+  const destOf = el => Math.max(el.getBoundingClientRect().top + scrollY - stepOffset(el), 0);
+  const scrollToY = y => scrollTo({ top: Math.max(y, 0), behavior: reduceMotion() ? 'auto' : 'smooth' });
+  function storyRootMargin() {
+    if (innerWidth <= 900) {
+      const m = $('.story-map-wrap'), top = navH() + (m ? m.offsetHeight : 0);
+      return '-' + top + 'px 0px -' + Math.max(innerHeight - top - Math.round(innerHeight * 0.22), 60) + 'px 0px';
+    }
+    return '-42% 0px -42% 0px';
+  }
+  /* While a button or a jump carries the page to a step, the steps it passes must not each
+     move the map: activate the destination once, hold the observer, release when the scroll ends. */
+  function lockStoryStep(target) {
+    storyLock = true;
+    if (target && storyActivate) storyActivate(target);
+    if (storyLockRelease) removeEventListener('scrollend', storyLockRelease);
+    clearTimeout(storyLockTimer);
+    storyLockRelease = () => {
+      clearTimeout(storyLockTimer); removeEventListener('scrollend', storyLockRelease); storyLockRelease = null;
+      if (target && storyActivate) storyActivate(target);
+      storyLock = false;
+    };
+    addEventListener('scrollend', storyLockRelease);
+    storyLockTimer = setTimeout(storyLockRelease, 1600);
+  }
+  function goToStep(step) { lockStoryStep(step); scrollToY(destOf(step)); }
+
+  /* The page is still settling while a jump is in flight (charts lay out, lazy images load),
+     so re-assert the destination for a short window. */
+  let jumpStop = null;
+  function scrollToSection(target) {
+    const smooth = !reduceMotion();
+    scrollTo({ top: destOf(target), behavior: smooth ? 'smooth' : 'auto' });
+    if (!smooth) return;
+    if (jumpStop) jumpStop();
+    let settled = false;
+    const snap = () => { const want = destOf(target); if (Math.abs(scrollY - want) > 8) scrollTo({ top: want, behavior: 'auto' }); };
+    const onSettle = () => { settled = true; snap(); };
+    const ro = ('ResizeObserver' in window) ? new ResizeObserver(() => { if (settled) snap(); }) : null;
+    if (ro) ro.observe(document.body);
+    addEventListener('scrollend', onSettle);
+    const t1 = setTimeout(onSettle, 900), t2 = setTimeout(snap, 1600), t3 = setTimeout(() => jumpStop && jumpStop(), 2600);
+    jumpStop = () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); removeEventListener('scrollend', onSettle); if (ro) ro.disconnect(); jumpStop = null; };
+    addEventListener('wheel', () => jumpStop && jumpStop(), { once: true, passive: true });
+    addEventListener('touchstart', () => jumpStop && jumpStop(), { once: true, passive: true });
+  }
+  function initAnchorScroll() {
+    document.addEventListener('click', e => {
+      if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      const a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+      const id = a.getAttribute('href').slice(1), target = id && document.getElementById(id); if (!target) return;
+      e.preventDefault(); scrollToSection(target);
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+    });
+  }
+  /* Floating up/down: section to section, and step by step through the timeline. */
+  function initSectionNav() {
+    const nav = $('#section-nav'), up = $('#section-nav-up'), down = $('#section-nav-down'); if (!nav || !up || !down) return;
+    const targets = () => $$('#hero, section[id], footer[id], .story-step').filter(el => !el.hasAttribute('hidden') && el.offsetParent !== null);
+    const go = t => { if (!t) return; if (t.el.classList.contains('story-step')) lockStoryStep(t.el); scrollToY(t.y); };
+    down.addEventListener('click', () => {
+      const next = targets().map(el => ({ el, y: destOf(el) })).filter(o => o.y > scrollY + 24).sort((a, b) => a.y - b.y)[0];
+      next ? go(next) : scrollToY(document.body.scrollHeight);
+    });
+    up.addEventListener('click', () => {
+      const prev = targets().map(el => ({ el, y: destOf(el) })).filter(o => o.y < scrollY - 24).sort((a, b) => b.y - a.y)[0];
+      prev ? go(prev) : scrollToY(0);
+    });
+    const onScroll = () => {
+      const y = scrollY;
+      nav.classList.toggle('is-visible', y > innerHeight * 0.45);
+      up.classList.toggle('is-disabled', y <= 24);
+      down.classList.toggle('is-disabled', (innerHeight + y) >= document.body.scrollHeight - 4);
+    };
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  }
+
   /* ── go ─────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', () => {
     safe('theme', () => { updateThemeToggle(); $('#theme-toggle').addEventListener('click', () => applyTheme(currentTheme() === 'light' ? 'dark' : 'light')); });
     safe('hero', initHero); safe('nav', initNav); safe('viewer', initViewer); safe('ledger', initLedger); safe('process', initProcess);
     safe('story', initStory); safe('spread', initSpread); safe('blue', initBlue); safe('claims', initClaims); safe('archive', initArchive); safe('audit', initAudit);
+    safe('anchors', initAnchorScroll); safe('sectionNav', initSectionNav);
   });
   let rs; addEventListener('resize', () => { clearTimeout(rs); rs = setTimeout(() => { [storyMap, blueMap].forEach(m => m && m.invalidateSize()); }, 150); });
 })();

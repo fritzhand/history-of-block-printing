@@ -24,7 +24,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 8px); -webkit-text-size-adjust: 100%; }
+html { scroll-padding-top: calc(var(--nav-h) + 8px); -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.65 var(--sans); }
 img, video, canvas { max-width: 100%; display: block; }
 a { color: var(--indigo); text-underline-offset: 3px; }
@@ -212,4 +212,16 @@ details.srcs > summary { cursor: pointer; color: var(--indigo); font-size: 0.85r
   .hero-video { object-position: 68% 40%; }
   .nav-logo-secondary, .nav-right .phase-name { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ── scroll assist ─────────────────────────────────────
+   Floating up/down: section to section down the page, and step by step through the
+   timeline so the sticky map is never jumped past in one leap. */
+.section-nav { position: fixed; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 8px; opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 95; }
+.section-nav.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.section-nav-btn { width: 46px; height: 46px; border-radius: 50%; background: var(--text); color: var(--bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 20px var(--shadow); transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease; }
+.section-nav-btn:hover { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.section-nav-btn:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.section-nav-btn svg { width: 20px; height: 20px; }
+.section-nav-btn.is-disabled { opacity: 0.32; pointer-events: none; }
+@media (max-width: 600px) { .section-nav { right: 14px; bottom: 14px; } .section-nav-btn { width: 44px; height: 44px; } }

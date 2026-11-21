@@ -31,6 +31,7 @@ Every asset path is relative, so the site works unchanged under the `/history-of
 | Claims to check | Six popular statements that do not survive the sources |
 | Picture archive | 25 rights-cleared images, each with its licence read from its own record |
 | Source audit | Every source object, its quote and its status, counted live |
+| Scroll assist | A floating up/down pair, as on the other studies: it steps section by section and step by step through the timeline (the map flies once to each step, not through the ones it passes), and anchor jumps re-assert their target while the page settles |
 | Light / dark theme | Indigo night and unbleached cotton, remembered between visits |
 
 ## Run locally
