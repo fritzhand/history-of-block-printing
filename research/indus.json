@@ -1,0 +1,160 @@
+{
+  "events": [
+    {
+      "id": "mehrgarh-cotton-fibres",
+      "year": -5500,
+      "displayDate": "6th millennium BCE",
+      "kind": "fibre",
+      "title": "Cotton fibres in a Neolithic grave at Mehrgarh",
+      "place": "Mehrgarh, Balochistan, Pakistan",
+      "lat": 29.39,
+      "lng": 67.62,
+      "summary": "Threads preserved by mineralization in a copper bead from a Neolithic burial at Mehrgarh were analysed and identified as cotton (genus Gossypium). The authors could not say whether the cotton came from a domesticated species, but wrote that cotton was already known and exploited for its fibres at this period.",
+      "significance": "Cotton, the fibre every later Indus textile and every block-printed cloth in this story depends on, was in use in the Indus region more than 3,000 years before the Priest-King.",
+      "sources": [
+        {
+          "institution": "Harappa.com",
+          "title": "First evidence of cotton at Neolithic Mehrgarh, Pakistan (abstract and commentary)",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/content/first-evidence-cotton-neolithic-mehrgarh-pakistan",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "In this study, several threads preserved by mineralization in a copper bead from a Neolithic burial (6th millennium) at Mehrgarh, Pakistan, were subject to rigorous metallurgical analysis.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Harappa.com",
+          "title": "First evidence of cotton at Neolithic Mehrgarh, Pakistan (abstract and commentary)",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/content/first-evidence-cotton-neolithic-mehrgarh-pakistan",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "it seems clear the cotton as such was already known and exploited for its fibres at this period.",
+          "note": "Year is DERIVED: the page says '6th millennium'; c. 5500 BCE is the midpoint used for the chart. Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "harappa-earliest-textile-3300",
+      "year": -3300,
+      "displayDate": "c. 3300 BCE",
+      "kind": "fibre",
+      "title": "The earliest textile evidence at Harappa",
+      "place": "Harappa, Punjab, Pakistan",
+      "lat": 30.63,
+      "lng": 72.86,
+      "summary": "Excavations at Harappa recovered woven-textile impressions on terracotta beads and spindle whorls from the site's earliest occupations. Harappa.com dates the earliest evidence of textiles there to about 3300 BCE.",
+      "significance": "Spinning and weaving are secure in the Indus world long before the carved cloak of the Priest-King.",
+      "sources": [
+        {
+          "institution": "Harappa.com",
+          "title": "Harappan Textiles",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/blog/harappan-textiles",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "The earliest evidence of textiles at Harappa goes back to about 3300 BCE, and is another suggestion of how important this product must have been to the later Indus economy.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "tDAR (the Digital Archaeological Record): abstract of a paper on Harappan textiles",
+          "title": "Plant based textiles and basketry at Harappa, Pakistan (3700-1900 BCE)",
+          "date": "n.d.",
+          "url": "https://core.tdar.org/document/429157/plant-based-textiles-and-basketry-at-harappa-pakistan-3700-1900-bce",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Woven textile impressed terracotta beads and spindle whorls provide evidence for spinning and weaving from the very earliest occupations at the site during the Ravi Phase (3700-2800 BCE).",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "priest-king-mohenjo-daro",
+      "year": -2250,
+      "displayDate": "Urban Harappa period, c. 2600–1900 BCE",
+      "kind": "artefact",
+      "title": "The Priest-King's carved cloak",
+      "place": "Mohenjo-daro, Sindh, Pakistan",
+      "lat": 27.33,
+      "lng": 68.14,
+      "summary": "A steatite bust, 17.5 cm high, found at Mohenjo-daro and now in the National Museum, Karachi. Its left shoulder is covered with a cloak decorated with trefoil, double circle and single circle designs that were originally filled with red pigment, cut with a specialized drill and touched up with a chisel. The carving shows a pattern on a garment; it does not show how that pattern was made on cloth. Harappa.com itself puts the name 'Priest King' in quotation marks.",
+      "significance": "The oldest image of a patterned cloth in this story, and the reason for the question the page asks: could such a pattern have been printed?",
+      "sources": [
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "The left shoulder is covered with a cloak decorated with trefoil, double circle and single circle designs that were originally filled with red pigment.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Drill holes in the center of each circle indicate they were made with a specialized drill and then touched up with a chisel.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Material: white, low fired steatite Dimensions: 17.5 cm height, 11 cm width Mohenjo-daro, DK 1909 National Museum, Karachi, 50.852",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "tDAR (the Digital Archaeological Record): abstract of a paper on Harappan textiles",
+          "title": "Plant based textiles and basketry at Harappa, Pakistan (3700-1900 BCE)",
+          "date": "n.d.",
+          "url": "https://core.tdar.org/document/429157/plant-based-textiles-and-basketry-at-harappa-pakistan-3700-1900-bce",
+          "verificationStatus": "DERIVED",
+          "accessType": "FREE",
+          "quote": "During the urban Harappa Phase (2600-1900 BC) charred fibers, pseudomorphs preserved on copper and silver, as well as impressions of textiles in clay and faience provide evidence for wide range of textiles",
+          "note": "The sculpture has no independent date on the Harappa.com page. It is placed in the urban Harappa period of the Indus civilisation, which this abstract gives as 2600-1900 BC for Harappa; the year on the map (c. 2250 BCE) is the midpoint of that range, not a measured date. Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "mohenjo-daro-cotton-fragment",
+      "year": -1760,
+      "displayDate": "Reported radiocarbon date 1760 BCE ±115",
+      "kind": "evidence",
+      "title": "A scrap of cotton from Mohenjo-daro, reported dyed with madder",
+      "place": "Mohenjo-daro, Sindh, Pakistan",
+      "lat": 27.33,
+      "lng": 68.14,
+      "summary": "John Marshall's excavators found a small piece of woven material on the lid of a silver case, preserved by silver salts. The Technological Research laboratory in Bombay found the convoluted structure characteristic of cotton and called its results 'tentative'. The Ashmolean Museum notes that a cotton fragment from Mohenjo-daro, carbon-dated to 1760 BCE ±115, 'has been reported to show evidence of madder dyeing', which would imply knowledge of mordants. Two cautions: the lab report was preliminary, and 1760 BCE is later than the urban Harappa period.",
+      "significance": "The only reported hint of mordant dyeing in the Indus world. It makes a red, printed cloak possible, not shown.",
+      "sources": [
+        {
+          "institution": "Harappa.com, quoting John Marshall (1931)",
+          "title": "In quest of a piece of cotton unearthed from Mohenjo Daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/content/quest-piece-cotton-unearthed-mohenjo-daro",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "As this examination has been confined to a fragment measuring 0.1 inch in one direction and 0.3 inch in the other direction, these results can only be regarded as tentative.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Ashmolean Museum, Eastern Art Online (Yousef Jameel Centre for Islamic and Asian Art)",
+          "title": "Indian textiles (Newberry collection essay)",
+          "date": "n.d.",
+          "url": "https://jameelcentre.ashmolean.org/collection/7/10236/10318",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "a cotton fibre fragment from Mohenjo-Daro, carbon-dated to 1760 BCE ±115, has been reported to show evidence of madder dyeing (Marshall 1931: 32-3; Lal 1962: 213-14). This implies the knowledge of mordant manipulation",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Not needed by the site: sources, tools, research, prompts and documentation
+3d
+prompts
+research
+tools
+*.md

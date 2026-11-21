@@ -1,0 +1,16 @@
+# Scratch work: renders, hi-res arrays, caches
+3d/work/
+.DS_Store
+node_modules/
+
+# Vercel
+.vercel/
+
+# Derived or redundant: rebuilt by the scripts, or not needed in the repository
+3d/out/priest-king.glb
+assets/video/hero-shawl-with-sound.mp4
+# The original full-length track is kept locally; only the trimmed bed is published
+assets/audio/temple.mp3
+
+__pycache__/
+*.pyc

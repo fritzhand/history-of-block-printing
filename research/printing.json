@@ -1,0 +1,443 @@
+{
+  "events": [
+    {
+      "id": "han-printed-gauze",
+      "year": -165,
+      "displayDate": "Western Han, 2nd century BCE",
+      "kind": "textile",
+      "title": "Printed and painted silk gauze in a Han tomb at Mawangdui",
+      "place": "Mawangdui, Changsha, Hunan, China",
+      "lat": 28.21,
+      "lng": 112.99,
+      "summary": "Tomb 1 at Mawangdui yielded a robe of printed and painted gauze. Search summaries of the Hunan Museum's and the Metropolitan Museum's pages say the Han printing was done with a stencil or stamp and then hand-coloured, which is not the same as printing with a carved block. This study has not been able to read either page (the Hunan Museum page timed out and the Met's site returned HTTP 429), so this entry is PENDING and makes no claim about how the cloth was printed.",
+      "significance": "Printing on cloth in China is far older than printing on paper; the exact method at Mawangdui is still to be checked.",
+      "sources": [
+        {
+          "institution": "Hunan Museum",
+          "title": "Printed and painted floss silk padded gauze robe",
+          "date": "n.d.",
+          "url": "https://web.hnmuseum.com/en/node/1456",
+          "verificationStatus": "PENDING",
+          "accessType": "FREE",
+          "note": "Page not read: the request timed out. A search summary describes the robe's multicolour printing as the first of its kind found in China. Accessed 2026-11-21."
+        },
+        {
+          "institution": "The Metropolitan Museum of Art",
+          "title": "Western Han printed silk (collection record 696723)",
+          "date": "n.d.",
+          "url": "https://www.metmuseum.org/art/collection/search/696723",
+          "verificationStatus": "PENDING",
+          "accessType": "FREE",
+          "note": "Page not read: HTTP 429. A search summary says the Met describes black-printed scrolls, hand-coloured, apparently with a stencil. Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "diamond-sutra-868",
+      "year": 868,
+      "displayDate": "11 May 868",
+      "kind": "book",
+      "title": "The Diamond Sutra: the oldest dated printed book",
+      "place": "Dunhuang, Gansu, China (Mogao cave 17)",
+      "lat": 40.04,
+      "lng": 94.8,
+      "summary": "A Buddhist text was carved onto woodblocks and printed as a long scroll, with the date 11 May 868. It is printed on paper, not cloth: the best-dated early product of block printing is a book, and this study found no source that settles whether printing on textiles came first.",
+      "significance": "Shows the carved-block principle fully developed by the 9th century, in China.",
+      "sources": [
+        {
+          "institution": "Linda Hall Library",
+          "title": "Scientist of the Day: The Diamond Sutra",
+          "date": "n.d.",
+          "url": "https://lindahall.org/about/news/scientist-of-the-day/the-diamond-sutra",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "On May 11, 868 C.E, a Chinese scribe named Wang Jie published an edition of a Buddhist text known as the Diamond Sutra",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Linda Hall Library",
+          "title": "Scientist of the Day: The Diamond Sutra",
+          "date": "n.d.",
+          "url": "https://lindahall.org/about/news/scientist-of-the-day/the-diamond-sutra",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "The text was carved onto a number of woodblocks, with a woodblock frontispiece at the beginning depicting the Buddha",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Smithsonian Magazine",
+          "title": "Five things to know about the Diamond Sutra, the world's oldest dated printed book",
+          "date": "n.d.",
+          "url": "https://www.smithsonianmag.com/smart-news/Five-things-to-know-about-diamond-sutra-worlds-oldest-dated-printed-book-180959052/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "he commissioned a block printer to create a 17-and-a-half-foot-long scroll of the sacred Buddhist text",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Smithsonian Magazine",
+          "title": "Five things to know about the Diamond Sutra, the world's oldest dated printed book",
+          "date": "n.d.",
+          "url": "https://www.smithsonianmag.com/smart-news/Five-things-to-know-about-diamond-sutra-worlds-oldest-dated-printed-book-180959052/",
+          "quote": "is acknowledged as the oldest dated printed book in existence",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "egypt-printing-block-10c",
+      "year": 950,
+      "displayDate": "10th century",
+      "kind": "tool",
+      "title": "A carved wooden textile printing block from Egypt",
+      "place": "Egypt",
+      "lat": 30.0,
+      "lng": 31.23,
+      "summary": "The Met holds a carved wooden block catalogued as a textile printing block of the 10th century, from Egypt. It is the tool itself, not a print: a real carved block, a thousand years old.",
+      "significance": "What a printing block looks like, and the earliest dated one in the Met's open collection.",
+      "sources": [
+        {
+          "institution": "The Metropolitan Museum of Art",
+          "title": "Textile Printing Block (accession 1971.87)",
+          "date": "n.d.",
+          "url": "https://www.metmuseum.org/art/collection/search/452215",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Textile Printing Block; 10th century; Wood; carved. Catalogue fields, accession 1971.87.",
+          "note": "Quote is the museum's catalogue fields, read from the Met Open Access API. Accessed 2026-11-21.",
+          "checkUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/452215",
+          "checkFields": {
+            "title": "Textile Printing Block",
+            "objectDate": "10th century",
+            "medium": "Wood; carved",
+            "accessionNumber": "1971.87"
+          }
+        }
+      ]
+    },
+    {
+      "id": "quseir-fustat-block-prints",
+      "year": 1300,
+      "displayDate": "13th–14th century",
+      "kind": "textile",
+      "title": "Block-printed cottons from India found in Egypt",
+      "place": "Quseir al-Qadim and Fustat, Egypt",
+      "lat": 26.15,
+      "lng": 34.28,
+      "summary": "At Quseir al-Qadim, a Red Sea port, 68 cotton fragments were found that match the 'Fustat' textiles identified as Gujarati: resist- and mordant-dyed cottons, mostly block-printed, dyed with indigotin and/or a red colorant from madder or morinda roots. The Quseir find was the first of its kind from a site excavated under datable conditions. Cleveland's catalogue dates a block-printed cotton fragment from Mamluk Egypt to the 1200s–1300s.",
+      "significance": "The first secure datable proof that block-printed, mordant-dyed Indian cloth was traded across the Indian Ocean.",
+      "sources": [
+        {
+          "institution": "Ashmolean Museum, Eastern Art Online (Yousef Jameel Centre for Islamic and Asian Art)",
+          "title": "Indian textiles (Newberry collection essay)",
+          "date": "n.d.",
+          "url": "https://jameelcentre.ashmolean.org/collection/7/10236/10318",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Among the material found from the second period of habitation are 68 cotton fragments that bear direct relation to the textiles Pfister identified as coming from Gujarat, both in design and technical details (Eastwood 1982; Vogelsang-Eastwood 1990). They are resist- and mordant- dyed textiles, mostly block-printed.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Ashmolean Museum, Eastern Art Online (Yousef Jameel Centre for Islamic and Asian Art)",
+          "title": "Indian textiles (Newberry collection essay)",
+          "date": "n.d.",
+          "url": "https://jameelcentre.ashmolean.org/collection/7/10236/10318",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "The Quseir find means that for the first time we now have sufficient evidence for the presence of textiles of this sort from a site that was excavated under datable conditions.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "The Cleveland Museum of Art",
+          "title": "Fragment (accession 1929.845)",
+          "date": "n.d.",
+          "url": "https://clevelandart.org/art/1929.845",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Fragment; 1200s–1300s; Egypt, Mamluk sultanate (1250–1517); Block printing on plain weave cotton ground. Catalogue fields, accession 1929.845.",
+          "note": "Quote is the museum's catalogue fields, read from the Cleveland Open Access API. Accessed 2026-11-21.",
+          "checkUrl": "https://openaccess-api.clevelandart.org/api/artworks/111339",
+          "checkFields": {
+            "title": "Fragment",
+            "creation_date": "1200s–1300s",
+            "technique": "Block printing on plain weave cotton ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vam-cairo-trefoil-15c",
+      "year": 1450,
+      "displayDate": "15th century",
+      "kind": "textile",
+      "title": "A Gujarat cotton with trefoils, found in Cairo",
+      "place": "Made in Gujarat (probably); found in Cairo",
+      "lat": 30.04,
+      "lng": 31.24,
+      "summary": "The V&A's fragment IS.73-1972 is printed, mordant and resist-dyed cotton, made in India (Gujarat, probably) in the 15th century and found in Cairo. Its pattern 'consists of geometrical shapes, each filled with a variety of smaller patterns including trefoils', in red and white on an indigo ground.",
+      "significance": "Trefoils, madder red and indigo on one printed cotton: the closest later echo of the Priest-King's motif that this study has found. A resemblance across 3,000 years is not a lineage.",
+      "sources": [
+        {
+          "institution": "Victoria and Albert Museum",
+          "title": "Fragment IS.73-1972",
+          "date": "n.d.",
+          "url": "https://collections.vam.ac.uk/item/O478834/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Textile fragment of printed mordant and resist-dyed cotton. The pattern consists of geometrical shapes, each filled with a variety of smaller patterns including trefoils. Colours are in red and white on indigo blue ground.",
+          "note": "Made: India; Gujarat (probably). Found: Cairo. Dated: 15th century. Accessed 2026-11-21.",
+          "checkUrl": "https://api.vam.ac.uk/v2/object/O478834"
+        }
+      ]
+    },
+    {
+      "id": "india-printing-block-15-16c",
+      "year": 1550,
+      "displayDate": "15th–16th century",
+      "kind": "tool",
+      "title": "A carved printing block from India",
+      "place": "India",
+      "lat": 22.0,
+      "lng": 79.0,
+      "summary": "The Met's carved wooden printing block from India, 15th–16th century, shows the tool behind the Gujarati cottons that reached Egypt. The Met records it only as 'India', so the marker on the map is approximate.",
+      "significance": "The Indian side of the same tradition as the Egyptian block, in wood, carved.",
+      "sources": [
+        {
+          "institution": "The Metropolitan Museum of Art",
+          "title": "Printing Block (accession 30.112.13)",
+          "date": "n.d.",
+          "url": "https://www.metmuseum.org/art/collection/search/448508",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Printing Block; 15th–16th century; Wood; carved. Catalogue fields, accession 30.112.13.",
+          "note": "Quote is the museum's catalogue fields, read from the Met Open Access API. Accessed 2026-11-21.",
+          "checkUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/448508",
+          "checkFields": {
+            "title": "Printing Block",
+            "objectDate": "15th–16th century",
+            "medium": "Wood; carved",
+            "accessionNumber": "30.112.13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "europe-late-block-printing-14c",
+      "year": 1375,
+      "displayDate": "14th century",
+      "kind": "textile",
+      "title": "Block printing reaches Europe, late",
+      "place": "Italy and Germany (attribution debated)",
+      "lat": 46.0,
+      "lng": 11.0,
+      "summary": "The V&A: block printing of textiles 'seems to have come to Europe comparatively late, as there is no evidence that it was practised there earlier than the 14th century'. It may have been introduced into Italy first, then spread into Germany. The museum also notes that little is known about printing or the makers of printed textiles in the 14th century. The marker is approximate.",
+      "significance": "Europe learned block printing about a thousand years after the Indian Ocean and China had it, which is why the Asian imports of the 17th century were such a shock.",
+      "sources": [
+        {
+          "institution": "Victoria and Albert Museum",
+          "title": "Block printed linen with pattern of birds (7022-1860)",
+          "date": "n.d.",
+          "url": "https://collections.vam.ac.uk/item/O13614/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Block printing of textiles seems to have come to Europe comparatively late, as there is no evidence that it was practised there earlier than the 14th century.",
+          "note": "Accessed 2026-11-21.",
+          "checkUrl": "https://api.vam.ac.uk/v2/object/O13614"
+        },
+        {
+          "institution": "Victoria and Albert Museum",
+          "title": "Printed linen fragment (1745-1888)",
+          "date": "n.d.",
+          "url": "https://collections.vam.ac.uk/item/O148454/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "little is known about printing or the makers of printed textiles in the 14th century",
+          "note": "Accessed 2026-11-21.",
+          "checkUrl": "https://api.vam.ac.uk/v2/object/O148454"
+        }
+      ]
+    },
+    {
+      "id": "european-calico-1690s",
+      "year": 1695,
+      "displayDate": "1690–1700",
+      "kind": "industry",
+      "title": "Indian imports start European calico printing",
+      "place": "England or the Netherlands",
+      "lat": 51.51,
+      "lng": -0.13,
+      "summary": "A V&A printed calico of 1690–1700, probably made in England or the Netherlands, comes with this account: Indian painted textiles imported by the Dutch, English and French East India Companies gave a direct incentive to make satisfactory substitutes at home, and this led to the development of European calico printing industries. Giorgio Riello adds that Europeans found it hard to replicate mordant-based printing and dyeing.",
+      "significance": "The moment the craft this site follows crosses into industry.",
+      "sources": [
+        {
+          "institution": "Victoria and Albert Museum",
+          "title": "Printed cotton, calico (12-1884)",
+          "date": "n.d.",
+          "url": "https://collections.vam.ac.uk/item/O77383/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Quantities of Indian painted textiles were imported into Europe by the Dutch, English and French East India Companies during the 17th century. They provided a direct incentive for the production of satisfactory substitutes at home, and this led to the development of European calico printing industries.",
+          "note": "Accessed 2026-11-21.",
+          "checkUrl": "https://api.vam.ac.uk/v2/object/O77383"
+        },
+        {
+          "institution": "London School of Economics, Global Economic History Network (working paper by Giorgio Riello)",
+          "title": "The Rise of Calico Printing in Europe and the Influence of Asia in the Seventeenth and Eighteenth Centuries",
+          "date": "n.d.",
+          "url": "https://www.lse.ac.uk/Economic-History/Assets/Documents/Research/GEHN/LesTreilles/PUNERiello.pdf",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "For many decades, Europeans were unable to produce pure cotton cloth and had great difficulty in replicating mordant-based textile printing and dyeing.",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "france-ban-lifted-1759",
+      "year": 1759,
+      "displayDate": "1759",
+      "kind": "industry",
+      "title": "France lifts its ban on printed cottons",
+      "place": "France",
+      "lat": 46.6,
+      "lng": 2.5,
+      "summary": "Riello writes that calico printing spread from Basle to Mulhouse and Neuchâtel and 'from there back to France after the ban was lifted in 1759'. This study did not find the 1686 French ban's own text, so the start of the prohibition is not stated here.",
+      "significance": "Prohibitions, not demand, set the pace of European calico printing.",
+      "sources": [
+        {
+          "institution": "London School of Economics, Global Economic History Network (working paper by Giorgio Riello)",
+          "title": "The Rise of Calico Printing in Europe and the Influence of Asia in the Seventeenth and Eighteenth Centuries",
+          "date": "n.d.",
+          "url": "https://www.lse.ac.uk/Economic-History/Assets/Documents/Research/GEHN/LesTreilles/PUNERiello.pdf",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "From Basle, calico printing spread to Mulhouse and Neuchâtel and from there back to France after the ban was lifted in 1759.",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "London School of Economics, Global Economic History Network (working paper by Giorgio Riello)",
+          "title": "The Rise of Calico Printing in Europe and the Influence of Asia in the Seventeenth and Eighteenth Centuries",
+          "date": "n.d.",
+          "url": "https://www.lse.ac.uk/Economic-History/Assets/Documents/Research/GEHN/LesTreilles/PUNERiello.pdf",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "The repeal of prohibitions in France in 1759 provided further stimulus to development",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "jouy-oberkampf-1783",
+      "year": 1783,
+      "displayDate": "c. 1783",
+      "kind": "industry",
+      "title": "A printshop at Jouy-en-Josas",
+      "place": "Jouy-en-Josas, France",
+      "lat": 48.76,
+      "lng": 2.17,
+      "summary": "Riello cites a printed vignette of a printshop in Jouy-en-Josas belonging to the calico printer Oberkampf in the early 1780s. The Met holds the printed cloth 'Les Travaux de la Manufacture', dated 1783: a textile that shows the works that made it.",
+      "significance": "A rare picture of block printing at work, printed on the cloth.",
+      "sources": [
+        {
+          "institution": "London School of Economics, Global Economic History Network (working paper by Giorgio Riello)",
+          "title": "The Rise of Calico Printing in Europe and the Influence of Asia in the Seventeenth and Eighteenth Centuries",
+          "date": "n.d.",
+          "url": "https://www.lse.ac.uk/Economic-History/Assets/Documents/Research/GEHN/LesTreilles/PUNERiello.pdf",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "shows a printshop in Jouy-en-Josas belonging to the famous calico printer Oberkampf in the early 1780s",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "The Metropolitan Museum of Art",
+          "title": "\"Les Travaux de la Manufacture\" (accession 26.233.8)",
+          "date": "n.d.",
+          "url": "https://www.metmuseum.org/art/collection/search/221839",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "\"Les Travaux de la Manufacture\"; 1783; Linen. Catalogue fields, accession 26.233.8.",
+          "note": "Quote is the museum's catalogue fields, read from the Met Open Access API. Accessed 2026-11-21.",
+          "checkUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/221839",
+          "checkFields": {
+            "title": "\"Les Travaux de la Manufacture\"",
+            "objectDate": "1783",
+            "medium": "Linen",
+            "accessionNumber": "26.233.8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "adinkra-bowdich-1817",
+      "year": 1817,
+      "displayDate": "1816–18",
+      "kind": "craft",
+      "title": "Stamped adinkra cloth reaches the British Museum",
+      "place": "Kumase, Asante Empire (modern Ghana)",
+      "lat": 6.69,
+      "lng": -1.62,
+      "summary": "A British Art Studies article describes adinkra as a stamped textile, made of cotton woven in long strips and decorated with repeated patterns in a grid. Thomas Bowdich acquired objects including stamped adinkra cloth on an 1816–18 mission centred on an 1817 journey to Kumase, and presented them to the British Museum in 1818 (formally added in 1831).",
+      "significance": "Block-style stamping developed independently of the Indian and Chinese traditions, in West Africa.",
+      "sources": [
+        {
+          "institution": "British Art Studies (Yale Center for British Art and Paul Mellon Centre), issue 28",
+          "title": "Adinkra from Kumase to the British Museum",
+          "date": "n.d.",
+          "url": "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "Adinkra cloth is a stamped textile that is regarded as a quintessentially Asante cultural form",
+          "note": "The 'independently' in the significance line is this study's inference, not the article's. Accessed 2026-11-21."
+        },
+        {
+          "institution": "British Art Studies (Yale Center for British Art and Paul Mellon Centre), issue 28",
+          "title": "Adinkra from Kumase to the British Museum",
+          "date": "n.d.",
+          "url": "https://britishartstudies.ac.uk/issues/28/adinkra-from-kumase-to-the-british-museum/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "these objects had been at the institution since 1818, when the Englishman Thomas Bowdich presented them to the museum.",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "morris-strawberry-thief-1883",
+      "year": 1883,
+      "displayDate": "1883",
+      "kind": "craft",
+      "title": "Morris revives indigo discharge and the hand block",
+      "place": "Merton Abbey, Surrey, England",
+      "lat": 51.41,
+      "lng": -0.19,
+      "summary": "William Morris designed 'Strawberry Thief' in 1883 (V&A) and printed it with the indigo discharge method, 'an ancient technique used for many centuries mostly in Asia'. Cleveland's record says the process required the entire cloth to be dyed blue before it was bleached and block printed.",
+      "significance": "Block printing survives industrialisation as a deliberate craft, borrowing from Asia.",
+      "sources": [
+        {
+          "institution": "Victoria and Albert Museum",
+          "title": "'Strawberry Thief' (T.586-1919)",
+          "date": "n.d.",
+          "url": "https://collections.vam.ac.uk/item/O78889/",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "The pattern was printed by the indigo discharge method, an ancient technique used for many centuries mostly in Asia.",
+          "note": "Accessed 2026-11-21.",
+          "checkUrl": "https://api.vam.ac.uk/v2/object/O78889"
+        },
+        {
+          "institution": "The Cleveland Museum of Art",
+          "title": "Strawberry Thief (accession 1937.696)",
+          "date": "n.d.",
+          "url": "https://clevelandart.org/art/1937.696",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "quote": "With Strawberry Thief, Morris perfected the indigo-discharge process, which required the entire cloth to be dyed blue before it was bleached and block printed",
+          "note": "Accessed 2026-11-21.",
+          "checkUrl": "https://openaccess-api.clevelandart.org/api/artworks/117129"
+        }
+      ]
+    }
+  ]
+}

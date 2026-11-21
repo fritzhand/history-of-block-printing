@@ -1,0 +1,95 @@
+{
+  "note": "Feature-level quotes for the 3D viewer's hotspots, all from the same Harappa.com entry for the sculpture.",
+  "features": [
+    {
+      "id": "fillet-ornament",
+      "label": "Fillet and ornaments",
+      "sources": [
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "quote": "Fillet or ribbon headband with circular inlay ornament on the forehead and similar but smaller ornament on the right upper arm.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "fillet-back",
+      "label": "Tails of the fillet",
+      "sources": [
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "quote": "The two ends of the fillet fall along the back and though the hair is carefully combed towards the back of the head, no bun is present.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "ears",
+      "label": "Ears",
+      "sources": [
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "quote": "Two holes beneath the highly stylized ears suggest that a necklace or other head ornament was attached to the sculpture.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "eyes-beard",
+      "label": "Eyes, lip and beard",
+      "sources": [
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "quote": "Eyes are deeply incised and may have held inlay.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        },
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "quote": "The upper lip is shaved and a short combed beard frames the face.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    },
+    {
+      "id": "crack",
+      "label": "The crack in the face",
+      "sources": [
+        {
+          "institution": "Harappa.com, Around the Indus in 90 Slides",
+          "title": "\"Priest King,\" Mohenjo-daro",
+          "date": "n.d.",
+          "url": "https://www.harappa.com/slide/priest-king-mohenjo-daro",
+          "quote": "The large crack in the face is the result of weathering or it may be due to original firing of this object.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "note": "Accessed 2026-11-21."
+        }
+      ]
+    }
+  ]
+}

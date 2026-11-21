@@ -1,0 +1,192 @@
+{
+  "carriedFrom": "fritzhand/history-of-indigo",
+  "note": "Events carried over unchanged, with the source objects and verification statuses they have in that study.",
+  "events": [
+    {
+      "id": "gujarat-indigo-cottons-egypt",
+      "displayDate": "from c. 1010 CE (earliest radiocarbon date)",
+      "year": 1010,
+      "era": "medieval",
+      "title": "Gujarati indigo-resist cottons reach Egypt",
+      "place": "Found in Egypt (Fustat and the Red Sea port of Quseir al-Qadim); made in Gujarat, India",
+      "lat": 30.0059,
+      "lng": 31.2317,
+      "summary": "The Ashmolean Museum's Newberry collection holds Indian block-printed, resist- and mordant-dyed cottons found in Egypt. Radiocarbon tests in 1994-95 gave dates as early as 1010 CE (plus or minus 55 years), and every blue textile analysed showed traces of indigotin. Designs link the cloths to Gujarat, and 53 Indian textiles were excavated at the Red Sea port of Quseir al-Qadim.",
+      "significance": "Physical evidence of Indian indigo-dyed cotton traded to the Islamic Mediterranean from the early 11th century.",
+      "sources": [
+        {
+          "institution": "Ashmolean Museum, University of Oxford (Yousef Jameel Centre, Eastern Art Online)",
+          "title": "Indian Block-Printed Textiles in Egypt: The Newberry Collection (Ruth Barnes)",
+          "date": "1997",
+          "url": "https://jameelcentre.ashmolean.org/collection/7/10236/10319",
+          "quote": "Those blue textiles that were analysed all showed traces of indigotin",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        }
+      ]
+    },
+    {
+      "id": "nantong-blue-calico-heritage-2006",
+      "displayDate": "Ming-Qing; listed 2006",
+      "year": 2006,
+      "era": "revival",
+      "title": "Nantong blue calico listed as national intangible heritage",
+      "place": "Nantong, Jiangsu, China",
+      "lat": 31.9802,
+      "lng": 120.8943,
+      "summary": "Nantong was a cotton-textile centre in the Ming (1368-1644) and Qing (1644-1911) dynasties, when its resist-printed blue calico sold across China. Local records list 19 registered hand-dyeing workshops. The dye comes from fermented indigo plants. The printing and dyeing technique was listed as national intangible cultural heritage in 2006.",
+      "significance": "A surviving Chinese vat-indigo tradition, now protected as heritage.",
+      "sources": [
+        {
+          "institution": "Nantong Municipal People's Government (English portal)",
+          "title": "Nantong blue calico printing and dyeing craft",
+          "date": "2023-05-16",
+          "url": "http://en.nantong.gov.cn/2023-05/16/c_905069.htm",
+          "quote": "The printing and dyeing techniques were listed as a national intangible cultural heritage in 2006.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        }
+      ]
+    },
+    {
+      "id": "danzhai-miao-batik-2006",
+      "displayDate": "2006; 2024 report",
+      "year": 2006,
+      "era": "revival",
+      "title": "Miao batik of Danzhai granted national heritage status",
+      "place": "Danzhai County, Guizhou, China",
+      "lat": 26.1989,
+      "lng": 107.7945,
+      "summary": "Miao women in Danzhai make batik with beeswax and indigo. The craft received national heritage status in 2006. The provincial government reported in 2024 that more than 200 Miao women from nearby villages benefited and that annual sales had reached 8 million yuan (about USD 1.1 million).",
+      "significance": "Indigo resist-dyeing reframed as heritage and rural-income policy.",
+      "sources": [
+        {
+          "institution": "Guizhou Provincial Government (eGuizhou English portal)",
+          "title": "Miao women making a better living with batik",
+          "date": "2024-05-09",
+          "url": "https://www.eguizhou.gov.cn/2024-05/09/c_985704.htm",
+          "quote": "artists using beeswax and indigo grass as materials",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        }
+      ]
+    },
+    {
+      "id": "indonesian-batik-unesco-2009",
+      "displayDate": "2009",
+      "year": 2009,
+      "era": "revival",
+      "title": "UNESCO inscribes Indonesian batik",
+      "place": "Java, Indonesia (marker: Yogyakarta)",
+      "lat": -7.7956,
+      "lng": 110.3695,
+      "summary": "UNESCO added Indonesian batik to the Representative List of the Intangible Cultural Heritage of Humanity in 2009. It describes batik as hot-wax resist patterning dyed with 'vegetable and other dyes'; the listing does not name indigo. Museum accounts note that a deep indigo blue could take as many as sixty dye baths, and that chemical dyes arrived in the late 1800s.",
+      "significance": "International heritage status for Southeast Asia's main resist-dye tradition, in which indigo was the traditional blue.",
+      "sources": [
+        {
+          "institution": "UNESCO Intangible Cultural Heritage",
+          "title": "Indonesian Batik (inscribed 2009, 4.COM)",
+          "date": "2009",
+          "url": "https://ich.unesco.org/en/RL/indonesian-batik-00170",
+          "quote": "Batik is dyed by proud craftspeople who draw designs on fabric using dots and lines of hot wax, which resists vegetable and other dyes",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        },
+        {
+          "institution": "Asian Art Museum of San Francisco",
+          "title": "Batik: Spectacular Textiles of Java (exhibition, 2012-13)",
+          "date": "2012",
+          "url": "https://exhibitions.asianart.org/exhibitions/batik-spectacular-textiles-of-java/",
+          "quote": "To obtain a deep blue, a textile might need to be immersed in an indigo bath as many as sixty times.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        }
+      ]
+    },
+    {
+      "id": "adire-eleko-abeokuta",
+      "displayDate": "c. 1910-1930s",
+      "year": 1910,
+      "era": "synthetic",
+      "title": "Yoruba adire: from Abeokuta tie-dye to hand-painted adire eleko",
+      "place": "Abeokuta and Ibadan, Nigeria",
+      "lat": 7.1475,
+      "lng": 3.3619,
+      "summary": "Adire, indigo resist-dyed cloth made by Yoruba women, first appeared as a distinct type in Abeokuta. Adire eleko, with designs painted in cassava starch before dyeing, is dated to no earlier than about 1910 and grew popular in the 1920s on imported European cotton shirting. Ibadan became the centre for hand-painted cloths. Popular designs included Olokun ('goddess of the sea') and the Jubilee pattern made for George V's 1935 jubilee. Buyers came from Nigeria, the Gold Coast, Senegal and the Belgian Congo.",
+      "significance": "Shows a women-run indigo industry built on imported cloth and credit that sold across West and Central Africa.",
+      "sources": [
+        {
+          "institution": "Horniman Museum and Gardens",
+          "title": "Nigeria60: Adire Archives (Amanda Kirby Okoye)",
+          "date": "2020-09-21",
+          "url": "https://www.horniman.ac.uk/story/nigeria60-adire-archives/",
+          "quote": "As a distinctive textile type, adiré first emerged in the city of Abeokuta, a centre for cotton production, weaving, and indigo-dyeing in the nineteenth century.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        },
+        {
+          "institution": "Victoria and Albert Museum",
+          "title": "Àdìrẹ: tied and dyed indigo textiles",
+          "date": "2026",
+          "url": "https://www.vam.ac.uk/articles/adire-tied-and-dyed-indigo-textiles",
+          "quote": "Cloths decorated by using a starch made from cassava flour were known as àdìrẹ eleko.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE"
+        },
+        {
+          "institution": "Cambridge University Press (Journal of African History 38:1, pp. 77-99)",
+          "title": "Judith Byfield, 'Innovation and Conflict: Cloth Dyers and the Interwar Depression in Abeokuta, Nigeria'",
+          "date": "1997",
+          "url": "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/innovation-and-conflict-cloth-dyers-and-the-interwar-depression-in-abeokuta-nigeria/85F62CACB276FB41CAFDBBB6AD4D9CDB",
+          "quote": "was in great demand across Nigeria, the Gold Coast, Senegal and the Belgian Congo",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "PAYWALL"
+        },
+        {
+          "institution": "Adire African Textiles (Duncan Clarke, dealer/scholar website)",
+          "title": "Adire Cloth of the Yorubas",
+          "date": "2026",
+          "url": "https://www.adireafricantextiles.com/textiles-resources-sub-saharan-africa/some-major-west-african-textile-traditions/adire-cloth-of-the-yorubas/",
+          "quote": "the jubilee pattern, (first produced for the jubilee of George V and Queen Mary in 1935)",
+          "verificationStatus": "PENDING",
+          "accessType": "FREE"
+        }
+      ]
+    },
+    {
+      "id": "unesco-blaudruck-inscription",
+      "displayDate": "November 2018",
+      "year": 2018,
+      "era": "revival",
+      "title": "UNESCO lists European indigo resist printing (Blaudruck)",
+      "place": "Austria, Czechia, Germany, Hungary and Slovakia (inscribed at 13.COM, Port Louis, Mauritius)",
+      "lat": 48.8,
+      "lng": 16.0,
+      "summary": "At its 13th session (Port Louis, 26 Nov – 1 Dec 2018), UNESCO's intangible-heritage committee inscribed 'Blaudruck/Modrotisk/Kékfestés/Modrotlač, resist block printing and indigo dyeing in Europe' on the Representative List. The practice uses hand-carved blocks, some up to 300 years old, to print a dye-resistant paste on cloth before indigo dyeing. Today it survives mainly in small family workshops.",
+      "significance": "International recognition of a surviving pre-industrial indigo craft in Central Europe.",
+      "sources": [
+        {
+          "institution": "UNESCO Intangible Cultural Heritage",
+          "title": "Blaudruck/Modrotisk/Kékfestés/Modrotlač, resist block printing and indigo dyeing in Europe",
+          "date": "2026-09-23",
+          "url": "https://ich.unesco.org/en/RL/blaudruck-modrotisk-kekfestes-modrotla-resist-block-printing-and-indigo-dyeing-in-europe-01365",
+          "quote": "Blaudruck/Modrotisk/Kékfestés/Modrotlač, which translates directly as blueprint or blue-dyeing, refers to the practice of printing a dye-resistant paste onto a cloth before dyeing over it with indigo dye.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "accessed": "2026-09-23"
+        },
+        {
+          "institution": "UNESCO Intangible Cultural Heritage",
+          "title": "Blaudruck/Modrotisk/Kékfestés/Modrotlač, resist block printing and indigo dyeing in Europe",
+          "date": "2026-09-23",
+          "url": "https://ich.unesco.org/en/RL/blaudruck-modrotisk-kekfestes-modrotla-resist-block-printing-and-indigo-dyeing-in-europe-01365",
+          "quote": "Nowadays, businesses engaged in the practice mainly comprise small, family-owned workshops, run by the second to seventh generation of printers.",
+          "verificationStatus": "CONFIRMED",
+          "accessType": "FREE",
+          "accessed": "2026-09-23"
+        }
+      ],
+      "locationNote": "lat/lng is an approximate regional centroid, not a specific workshop. The session venue and dates come from UNESCO search results (ich.unesco.org doc 42296)."
+    }
+  ]
+}
