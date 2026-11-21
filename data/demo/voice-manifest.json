@@ -1,0 +1,65 @@
+{
+  "takes": {
+    "assist": {
+      "hash": "ae9222c9a4",
+      "seconds": 8.55
+    },
+    "audit": {
+      "hash": "595681a0eb",
+      "seconds": 9.35
+    },
+    "blue": {
+      "hash": "8a8e9443ce",
+      "seconds": 8.38
+    },
+    "claims": {
+      "hash": "e0b3ba5e1f",
+      "seconds": 7.78
+    },
+    "dots": {
+      "hash": "78ba5b3370",
+      "seconds": 8.3
+    },
+    "ledger": {
+      "hash": "ece77c4a8b",
+      "seconds": 11.23
+    },
+    "map": {
+      "hash": "5b0104fe5b",
+      "seconds": 10
+    },
+    "model": {
+      "hash": "4757119d6c",
+      "seconds": 8.53
+    },
+    "open": {
+      "hash": "384f9f9ec5",
+      "seconds": 11.18
+    },
+    "printed": {
+      "hash": "21b6a25f06",
+      "seconds": 9.15
+    },
+    "process": {
+      "hash": "edc0610a60",
+      "seconds": 8.48
+    },
+    "purpose": {
+      "hash": "fab9749fdc",
+      "seconds": 13.35
+    },
+    "scrub": {
+      "hash": "ebf14f90b6",
+      "seconds": 6.78
+    },
+    "what": {
+      "hash": "abc1057f9c",
+      "seconds": 9
+    }
+  },
+  "voice": {
+    "engine": "Kokoro-82M",
+    "voice": "af_heart",
+    "speed": 1
+  }
+}

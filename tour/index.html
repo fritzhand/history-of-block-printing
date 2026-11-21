@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8" /><title>The Repeating Hand: narrated demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="robots" content="noindex" />
+<script>
+  /* /tour/ opens the narrated demo, keeping any other query (/tour/?theme=light). */
+  var q = location.search.replace(/^\?/, '');
+  location.replace('../?demo' + (q ? '&' + q : '') + location.hash);
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=../?demo" /></noscript></head>
+<body><p><a href="../?demo">Open the narrated demo</a></p></body></html>

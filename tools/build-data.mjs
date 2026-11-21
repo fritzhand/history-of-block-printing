@@ -186,10 +186,11 @@ console.log(`js/data.js: ${mapEvents.length} events, ${scrollSteps.length} steps
    old data.js beside the new model (or the reverse). Stamp the three asset URLs in index.html with a
    hash of their contents: a changed file gets a new URL. (Binary assets are renamed when they change.) */
 const stamp = crypto.createHash('sha1');
-for (const f of ['css/styles.css', 'js/app.js', 'js/data.js']) stamp.update(fs.readFileSync(path.join(root, f)));
+for (const f of ['css/styles.css', 'css/demo.css', 'js/app.js', 'js/data.js', 'js/demo.js', 'js/demo-data.js']) if (fs.existsSync(path.join(root, f))) stamp.update(fs.readFileSync(path.join(root, f)));
 const v = stamp.digest('hex').slice(0, 8);
 const htmlPath = path.join(root, 'index.html');
 const html = fs.readFileSync(htmlPath, 'utf8');
-const stamped = html.replace(/(css\/styles\.css|js\/data\.js|js\/app\.js)(\?v=[0-9a-f]+)?(?=")/g, `$1?v=${v}`);
+const stamped = html.replace(/(css\/styles\.css|js\/data\.js|js\/app\.js)(\?v=[0-9a-f]+)?(?=")/g, `$1?v=${v}`)
+  .replace(/(<meta name="asset-version" content=")[0-9a-f]*(")/, `$1${v}$2`);   // the demo's lazy-loaded files read this
 if (stamped !== html) fs.writeFileSync(htmlPath, stamped);
 console.log(`index.html asset version: ${v}`);

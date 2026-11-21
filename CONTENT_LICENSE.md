@@ -35,10 +35,17 @@ textures, the soundtrack, and the third-party media the site displays.
 
 ## Music
 
-- Hero soundtrack: "Temple" by Jean du Voyage. **Rights confirmed by the site owner on 2026-11-21.**
+- Soundtrack: "Temple" by Jean du Voyage. **Rights confirmed by the site owner on 2026-11-21.**
   Licence terms and any attribution wording required by the licensor are not recorded in this
-  repository yet: add them here. `assets/audio/hero-bed.mp3` is a trimmed, faded and loudness-normalised
-  excerpt (`tools/build-hero.py`). The original full-length file is kept locally and is not published.
+  repository yet: add them here. `assets/audio/hero-bed.mp3` (12 s, under the header video) and `assets/audio/demo-bed.mp3` (60 s, looped
+  quietly under the narrated demo) are trimmed, faded and loudness-normalised excerpts. The original full-length
+  file is kept locally and is not published.
+
+## Narration
+
+- The narrated demo's voice is **Kokoro-82M**, voice `af_heart` (hexgrad/Kokoro-82M; Apache-2.0 code and weights): an
+  open-source synthetic voice that clones no one. The recorded takes (`assets/demo/voice/`) and the script
+  (`data/demo/`) are released under CC BY 4.0 with the rest of the content.
 
 ## Media policy
 

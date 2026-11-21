@@ -1,0 +1,54 @@
+/* The narrated demo: the Demo buttons, the launcher, the spotlight and the caption card.
+   Colours come from the tokens in styles.css, so it follows the light and dark themes. Layers: the
+   nav is 100; the spotlight 110; the launcher 118; the card 125. */
+:root { --demo-scrim: rgba(8, 9, 16, 0.62); }
+:root[data-theme='light'] { --demo-scrim: rgba(40, 30, 10, 0.5); }
+
+.demo-btn { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 13px 0 10px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent); color: var(--on-accent); font: 600 0.85rem var(--sans); cursor: pointer; }
+.demo-btn svg { width: 16px; height: 16px; } .demo-btn:hover { filter: brightness(1.08); }
+.demo-btn:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.btn-demo { background: transparent; border-color: var(--accent); color: #f08a70; }
+#hero .btn-demo { background: rgba(217, 107, 82, 0.16); border-color: #d96b52; color: #ffd7cc; }
+
+.demo-backdrop { position: fixed; inset: 0; z-index: 118; display: grid; place-items: center; padding: 16px; background: var(--demo-scrim); }
+.demo-launch { width: min(540px, 100%); max-height: calc(100dvh - 32px); overflow: auto; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 24px 60px var(--shadow); padding: 26px 26px 20px; }
+.demo-kicker { font: 600 0.74rem/1 var(--sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+.demo-launch h2 { margin: 0 0 10px; font-size: clamp(1.6rem, 5vw, 2.1rem); }
+.demo-lede { margin: 0 0 16px; color: var(--text-2); font-size: 1rem; line-height: 1.55; }
+.demo-chapters { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 6px; }
+.demo-chapter-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-2); color: var(--text); font: 600 0.92rem var(--sans); text-align: left; cursor: pointer; }
+.demo-chapter-btn:hover { border-color: var(--accent); }
+.demo-dim { color: var(--text-3); font-weight: 500; font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.demo-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; } .demo-not-now { margin-left: auto; }
+.demo-fine { margin: 14px 0 0; font-size: 0.78rem; line-height: 1.5; color: var(--text-3); }
+
+/* the spotlight: a ring around what is being described, dimming the rest. It does not take pointer events, so the page stays usable. */
+.demo-spot { position: fixed; z-index: 110; pointer-events: none; border-radius: 12px; box-shadow: 0 0 0 100vmax var(--demo-scrim), 0 0 0 3px var(--accent); transition: left 320ms ease, top 320ms ease, width 320ms ease, height 320ms ease, opacity 180ms ease; }
+.demo-spot[data-off='true'] { opacity: 0; }
+
+.demo-card { position: fixed; left: 0; top: 0; z-index: 125; width: min(430px, calc(100vw - 24px)); overflow: hidden; padding: 14px 16px 12px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 18px 50px var(--shadow); transition: transform 320ms ease; }
+.demo-progress { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--border-soft); }
+.demo-progress i { display: block; height: 100%; width: 100%; background: var(--accent); transform-origin: left; animation: demo-fill linear forwards; }
+@keyframes demo-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.demo-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 2px 0 4px; }
+.demo-eyebrow { font: 700 0.7rem/1 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); }
+.demo-title { margin: 0 0 4px; font: 600 1.25rem/1.2 var(--serif); } .demo-text { margin: 0 0 10px; font-size: 0.92rem; line-height: 1.5; color: var(--text-2); }
+.demo-link-row { margin: -2px 0 10px; } .demo-link { text-decoration: none; }
+.demo-blocked { margin: -2px 0 10px; font-size: 0.82rem; font-weight: 600; color: var(--tag-reported); }
+.demo-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.demo-icon { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; border: 1px solid transparent; background: transparent; color: var(--text); cursor: pointer; }
+.demo-icon:hover { background: var(--elev); border-color: var(--border); } .demo-icon[disabled] { opacity: 0.35; cursor: default; }
+.demo-icon:focus-visible, .demo-pill:focus-visible, .demo-chapter-btn:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.demo-play { background: var(--elev); border-color: var(--border); }
+.demo-pills { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
+.demo-pill { padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text-2); font: 600 0.72rem var(--sans); cursor: pointer; white-space: nowrap; }
+.demo-pill:hover { background: var(--elev); color: var(--text); } .demo-pill[aria-pressed='true'] { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+@media (max-width: 760px) {
+  .demo-card { width: calc(100vw - 24px); padding: 12px 14px 10px; }
+  .demo-text { font-size: 0.88rem; margin-bottom: 8px; }
+  .demo-pills { margin-left: 0; width: 100%; justify-content: flex-start; margin-top: 4px; }
+  .demo-launch { padding: 20px 18px 16px; }
+  .demo-btn span { display: none; } .demo-btn { padding: 0 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .demo-card, .demo-spot { transition: none; } .demo-progress i { animation: none; transform: none; opacity: 0.35; } }

@@ -31,6 +31,7 @@ Every asset path is relative, so the site works unchanged under the `/history-of
 | Claims to check | Six popular statements that do not survive the sources |
 | Picture archive | 25 rights-cleared images, each with its licence read from its own record |
 | Source audit | Every source object, its quote and its status, counted live |
+| Narrated demo | A **Demo** button (also `?demo` and `/tour/`): a launcher card with a short brief, then a spotlight tour with a voice. The page scrolls, the 3D model turns, the surface switches, the map visits its stops and the slider sweeps, on cue. 14 steps, about 2½ minutes; the voice is Kokoro-82M (open source, Apache-2.0) |
 | Scroll assist | A floating up/down pair, as on the other studies: it steps section by section and step by step through the timeline (the map flies once to each step, not through the ones it passes), and anchor jumps re-assert their target while the page settles |
 | Light / dark theme | Indigo night and unbleached cotton, remembered between visits |
 

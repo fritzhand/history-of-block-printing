@@ -150,6 +150,8 @@
     });
     list.innerHTML = hs.map(h => '<li><button type="button" data-slot="' + esc(h.slot) + '"><span>' + esc(h.label) + '</span><span class="badge ' + tagClass(h.tag) + '">' + esc(h.tag) + '</span></button></li>').join('');
     list.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const h = hs.find(x => x.slot === b.dataset.slot); if (h) select(h); });
+    api.selectHotspot = slot => { const h = hs.find(x => x.slot === slot); if (h) select(h); else clearSelection(); };
+    function clearSelection() { $$('button', list).forEach(b => b.classList.remove('is-active')); $$('.hotspot', mv).forEach(b => b.classList.remove('is-active')); detail.innerHTML = '<p class="muted">Tap a dot on the model, or a feature here.</p>'; }
     function select(h) {
       $$('button', list).forEach(b => b.classList.toggle('is-active', b.dataset.slot === h.slot));
       $$('.hotspot', mv).forEach(b => b.classList.toggle('is-active', b.slot === h.slot));
@@ -163,6 +165,9 @@
       note.textContent = NOTES[v] || '';
     };
     segs.forEach(b => b.addEventListener('click', () => setVariant(b.dataset.variant)));
+    api.setVariant = setVariant;
+    api.orbit = (orbit, jump) => { mv.cameraOrbit = orbit; if (jump && mv.jumpCameraToGoal) mv.jumpCameraToGoal(); };
+    api.viewer = mv;
     mv.addEventListener('load', () => {
       const vs = mv.availableVariants || [];
       if (vs.length < 2) { segs.forEach(b => { if (b.dataset.variant === 'printed') b.disabled = true; }); note.textContent = 'This browser could not switch surfaces. ' + NOTES.stone; }
@@ -285,6 +290,7 @@
       if (spreadChart) spreadChart.update('none');
     };
     r.addEventListener('input', upd); upd();
+    api.setScrub = pos => { r.value = String(pos); upd(); };
   }
 
   /* ── blue thread ────────────────────────────────────── */
@@ -346,7 +352,7 @@
     return navH() + 8;
   };
   const destOf = el => Math.max(el.getBoundingClientRect().top + scrollY - stepOffset(el), 0);
-  const scrollToY = y => scrollTo({ top: Math.max(y, 0), behavior: reduceMotion() ? 'auto' : 'smooth' });
+  const scrollToY = y => { if (jumpStop) jumpStop(); scrollTo({ top: Math.max(y, 0), behavior: reduceMotion() ? 'auto' : 'smooth' }); };
   function storyRootMargin() {
     if (innerWidth <= 900) {
       const m = $('.story-map-wrap'), top = navH() + (m ? m.offsetHeight : 0);
@@ -421,12 +427,31 @@
     addEventListener('scroll', onScroll, { passive: true }); onScroll();
   }
 
+  /* ── control API: the narrated demo and the reel drive the page through this ── */
+  const api = { scrollToY, destOf, scrollToSection, goToStep, reduceMotion };
+  window.PrintApp = api;
+  function initDemoEntry() {
+    const ver = () => (($('meta[name="asset-version"]') || {}).content) || '0';
+    let loading = null;
+    const load = () => loading || (loading = new Promise((resolve, reject) => {
+      const v = ver();
+      const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'css/demo.css?v=' + v; document.head.appendChild(css);
+      const add = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src + '?v=' + v; s.onload = res; s.onerror = () => rej(new Error('could not load ' + src)); document.head.appendChild(s); });
+      add('js/demo-data.js').then(() => add('js/demo.js')).then(resolve, reject);
+    }));
+    const open = chapter => load().then(() => window.PrintDemo && window.PrintDemo.open(chapter)).catch(e => console.error('[demo]', e));
+    ['demo-btn', 'hero-demo'].forEach(id => { const b = document.getElementById(id); if (b) b.addEventListener('click', () => open()); });
+    /* ?demo opens the launcher; ?demo=<chapter> aims Start at that chapter. Sound still waits for a press of Start. */
+    const p = new URLSearchParams(location.search);
+    if (p.has('demo')) open(p.get('demo'));
+  }
+
   /* ── go ─────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', () => {
     safe('theme', () => { updateThemeToggle(); $('#theme-toggle').addEventListener('click', () => applyTheme(currentTheme() === 'light' ? 'dark' : 'light')); });
     safe('hero', initHero); safe('nav', initNav); safe('viewer', initViewer); safe('ledger', initLedger); safe('process', initProcess);
     safe('story', initStory); safe('spread', initSpread); safe('blue', initBlue); safe('claims', initClaims); safe('archive', initArchive); safe('audit', initAudit);
-    safe('anchors', initAnchorScroll); safe('sectionNav', initSectionNav);
+    safe('anchors', initAnchorScroll); safe('sectionNav', initSectionNav); safe('demoEntry', initDemoEntry);
   });
   let rs; addEventListener('resize', () => { clearTimeout(rs); rs = setTimeout(() => { [storyMap, blueMap].forEach(m => m && m.invalidateSize()); }, 150); });
 })();

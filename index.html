@@ -9,6 +9,7 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="theme-color" content="#0e1019" />
   <meta name="author" content="Jeremy Fritzhand" />
+  <meta name="asset-version" content="6ef28c99" />
 
   <meta property="og:site_name" content="The Repeating Hand" />
   <meta property="og:title" content="The Repeating Hand: A History of Block Printing" />
@@ -49,7 +50,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=b25ae29b" />
+  <link rel="stylesheet" href="css/styles.css?v=6ef28c99" />
   <script type="module" src="https://unpkg.com/@google/model-viewer@4.0.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
@@ -57,7 +58,7 @@
   <div id="progress-bar"></div>
 
   <nav id="main-nav">
-    <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open the section menu" aria-expanded="false" aria-controls="nav-drawer">
+    <button id="nav-toggle" data-tour="menu" class="nav-toggle" type="button" aria-label="Open the section menu" aria-expanded="false" aria-controls="nav-drawer">
       <span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span>
     </button>
     <a class="nav-logo" href="#hero" title="The Repeating Hand">
@@ -69,7 +70,10 @@
       <span class="nav-logo-text"><span class="nav-logo-primary">The Repeating Hand</span><span class="nav-logo-secondary">A history of block printing</span></span>
     </a>
     <div class="nav-right" id="nav-phase-indicator" aria-live="polite"></div>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light or dark mode" aria-pressed="false"></button>
+    <button id="demo-btn" class="demo-btn" type="button" data-tour="demo" aria-haspopup="dialog" title="A narrated tour of this page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg><span>Demo</span>
+    </button>
+    <button id="theme-toggle" data-tour="theme" class="theme-toggle" type="button" aria-label="Toggle light or dark mode" aria-pressed="false"></button>
   </nav>
   <div id="nav-scrim" class="nav-scrim" hidden></div>
   <aside id="nav-drawer" class="nav-drawer" hidden aria-label="Sections"><nav id="nav-drawer-list" class="nav-drawer-list"></nav></aside>
@@ -85,14 +89,15 @@
     <div class="hero-inner">
       <p class="eyebrow">An open-data history of block printing</p>
       <h1>The Repeating Hand</h1>
-      <p class="hero-lede">Some 4,000 years ago, a king carved in soapstone wore a cloak covered in trefoils. <em>Was it printed?</em></p>
+      <p class="hero-lede" data-tour="hero-lede">Some 4,000 years ago, a king carved in soapstone wore a cloak covered in trefoils. <em>Was it printed?</em></p>
       <p class="hero-sub">Nobody knows. This page follows the evidence for printing on cloth, from the Indus to Gujarat, Egypt, China, West Africa and Europe, and says plainly what is evidenced, what is reported, what has not been found, and what is imagined.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#king">Meet the Priest-King</a>
         <a class="btn" href="#story">Follow the timeline</a>
+        <button id="hero-demo" class="btn btn-demo" type="button" aria-haspopup="dialog">▶ Hear the narrated demo</button>
         <button id="sound-toggle" class="btn btn-ghost" type="button" aria-pressed="false" hidden>Sound on</button>
       </div>
-      <dl class="hero-stats" id="hero-stats"></dl>
+      <dl class="hero-stats" id="hero-stats" data-tour="hero-stats"></dl>
       <p class="hero-credit">The moving image is a render of this page's 3D model, a stand-in for a reconstruction video. Music: "Temple" by Jean du Voyage.</p>
     </div>
   </header>
@@ -104,7 +109,7 @@
       <h2>The Priest-King, and what his cloak can tell us</h2>
       <p class="lede">A steatite bust, 17.5 cm tall, from Mohenjo-daro, now in the National Museum in Karachi. The model below is built from published photographs and measurements: an interpretation, not a scan. Turn it, tap the dots, and switch between the carved stone and an illustration of the same pattern as printed cloth.</p>
       <div class="viewer-grid">
-        <div class="viewer-card">
+        <div class="viewer-card" data-tour="viewer">
           <model-viewer id="pk-viewer" alt="3D model of the Priest-King of Mohenjo-daro, a bearded bust with a trefoil-patterned cloak over the left shoulder"
             camera-controls touch-action="pan-y" interaction-prompt="auto" shadow-intensity="0.8" exposure="1.05" environment-image="neutral"
             camera-orbit="25deg 80deg 0.42m" min-camera-orbit="auto auto 0.18m" max-camera-orbit="auto auto 0.9m" field-of-view="30deg"
@@ -112,7 +117,7 @@
             <div class="viewer-progress" slot="progress-bar" hidden></div>
           </model-viewer>
           <div class="viewer-bar">
-            <div class="seg" role="group" aria-label="Surface">
+            <div class="seg" role="group" aria-label="Surface" data-tour="surface">
               <button type="button" class="seg-btn is-active" data-variant="stone" aria-pressed="true">Carved stone</button>
               <button type="button" class="seg-btn" data-variant="printed" aria-pressed="false">As printed cloth <span class="seg-flag">illustration</span></button>
             </div>
@@ -120,7 +125,7 @@
           </div>
           <p class="viewer-note" id="viewer-note">Stone: modelled from photographs of the sculpture. Not a scan.</p>
         </div>
-        <aside class="feature-panel" aria-live="polite">
+        <aside class="feature-panel" aria-live="polite" data-tour="hotspots">
           <h3>What the sculpture shows</h3>
           <ul class="feature-list" id="feature-list"></ul>
           <div class="feature-detail" id="feature-detail"><p class="muted">Tap a dot on the model, or a feature here.</p></div>
@@ -129,11 +134,11 @@
 
       <h3 class="sub">Evidenced, reported, not found, imagined</h3>
       <p class="lede small">The question has four kinds of answer. Each row says which kind it is, and links to its source.</p>
-      <div class="ledger" id="ledger"></div>
+      <div class="ledger" id="ledger" data-tour="ledger"></div>
 
       <h3 class="sub">Photographs</h3>
       <p class="lede small">Most openly licensed photographs of the Priest-King show casts or copies; the captions say which.</p>
-      <div class="photo-row" id="king-photos"></div>
+      <div class="photo-row" id="king-photos" data-tour="photos"></div>
     </div>
   </section>
 
@@ -143,10 +148,10 @@
       <p class="eyebrow">The craft</p>
       <h2>How a block print is made</h2>
       <p class="lede">A general description from the museum sources below. It is how block-printed, mordant- and resist-dyed cotton is made in the periods where we can see the work. The Indus case is unknown.</p>
-      <ol class="process" id="process-steps"></ol>
+      <ol class="process" id="process-steps" data-tour="process"></ol>
       <h3 class="sub">Swatches</h3>
       <p class="lede small">Generated from the same trefoil geometry as the 3D model, and free to reuse. They illustrate the hypothesis; they are not finds.</p>
-      <div class="swatches" id="swatches"></div>
+      <div class="swatches" id="swatches" data-tour="swatches"></div>
     </div>
   </section>
 
@@ -156,11 +161,11 @@
       <p class="eyebrow">The timeline</p>
       <h2>From cotton to calico</h2>
       <p class="lede">Eighteen stops, from the first cotton at Mehrgarh to a UNESCO listing in 2018. Scroll, and the map follows.</p>
-      <div class="era-legend" id="era-legend" aria-label="Eras"></div>
+      <div class="era-legend" id="era-legend" data-tour="eras" aria-label="Eras"></div>
     </div>
     <div class="story-grid">
       <div class="story-steps" id="story-steps"></div>
-      <div class="story-map-wrap"><div id="story-map" class="map" role="application" aria-label="Map of the timeline"></div></div>
+      <div class="story-map-wrap" data-tour="map"><div id="story-map" class="map" role="application" aria-label="Map of the timeline"></div></div>
     </div>
   </section>
 
@@ -170,12 +175,14 @@
       <p class="eyebrow">When and where</p>
       <h2>Every stop, by region and date</h2>
       <p class="lede">The time axis is compressed: the first 4,000 years take up as much room as the last 160. Drag the slider to hide what had not yet happened.</p>
+      <div class="spread-block" data-tour="spread">
       <div class="chart-card"><canvas id="spread-chart" aria-label="Events by region and date" role="img"></canvas></div>
       <div class="scrub">
         <label for="scrub-range">Year <output id="scrub-year" for="scrub-range"></output></label>
         <input id="scrub-range" type="range" min="0" max="1000" value="1000" step="1" />
       </div>
       <p class="scrub-readout" id="scrub-readout"></p>
+      </div>
     </div>
   </section>
 
@@ -185,7 +192,7 @@
       <p class="eyebrow">The blue thread</p>
       <h2>Where printing meets indigo</h2>
       <p class="lede">Printed cloth in this story is nearly always two colours: madder red and indigo blue. A sister study, <a href="https://fritzhand.github.io/history-of-indigo/" target="_blank" rel="noopener"><em>Indigo: The Blue That Dyed the World</em></a>, follows the blue. These are the places where the two stories touch. Cards from that study keep their own sources.</p>
-      <div class="blue-grid">
+      <div class="blue-grid" data-tour="blue">
         <div id="blue-map" class="map map-small" role="application" aria-label="Map of resist and block-printed indigo traditions"></div>
         <div class="blue-cards" id="blue-cards"></div>
       </div>
@@ -198,7 +205,7 @@
       <p class="eyebrow">Claims to check</p>
       <h2>What the sources do not say</h2>
       <p class="lede">Popular statements that, on the sources this study read, are unproven, overstated or wrong.</p>
-      <div class="claims" id="claims-list"></div>
+      <div class="claims" id="claims-list" data-tour="claims"></div>
     </div>
   </section>
 
@@ -208,7 +215,7 @@
       <p class="eyebrow">Picture archive</p>
       <h2>Rights-cleared images</h2>
       <p class="lede">Every image here is public domain, CC0, CC BY or CC BY-SA, with the licence read on its own record. Tap one for the credit and the source.</p>
-      <div class="media-grid" id="media-grid"></div>
+      <div class="media-grid" id="media-grid" data-tour="archive"></div>
     </div>
   </section>
 
@@ -220,7 +227,7 @@
       <p class="eyebrow">Source audit</p>
       <h2>Every claim, its source and its status</h2>
       <p class="lede" id="audit-lede"></p>
-      <div class="audit-stats" id="audit-stats"></div>
+      <div class="audit-stats" id="audit-stats" data-tour="audit"></div>
       <div class="audit-list" id="audit-list"></div>
     </div>
   </section>
@@ -247,14 +254,15 @@
     </div>
   </section>
 
-  <footer id="site-footer">
+  <footer id="site-footer" data-tour="footer">
     <div class="wrap">
       <dl class="hero-stats foot-stats" id="footer-stats"></dl>
+      <p class="foot-repo">Open source: <a href="https://github.com/fritzhand/history-of-block-printing" target="_blank" rel="noopener">github.com/fritzhand/history-of-block-printing</a></p>
       <p class="muted">The Repeating Hand · open data under CC BY 4.0 · no cookies, no analytics.</p>
     </div>
   </footer>
 
-  <div id="section-nav" class="section-nav">
+  <div id="section-nav" class="section-nav" data-tour="scrollassist">
     <button class="section-nav-btn" id="section-nav-up" type="button" aria-label="Previous section or story step">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
     </button>
@@ -265,7 +273,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="js/data.js?v=b25ae29b"></script>
-  <script src="js/app.js?v=b25ae29b"></script>
+  <script src="js/data.js?v=6ef28c99"></script>
+  <script src="js/app.js?v=6ef28c99"></script>
 </body>
 </html>

@@ -13,10 +13,12 @@ let html = fs.readFileSync(ROOT + '/index.html', 'utf8');
 const strip = html.replace(/<script[^>]*src="https:[^"]*"[^>]*><\/script>/g, '').replace(/<script type="module"[^>]*><\/script>/g, '');
 const leaflet = fs.readFileSync(NM + '/leaflet/dist/leaflet.js', 'utf8');
 const data = fs.readFileSync(ROOT + '/js/data.js', 'utf8'), app = fs.readFileSync(ROOT + '/js/app.js', 'utf8');
-const stubs = `window.fetch = () => Promise.resolve({ ok: true });
+const demoData = fs.readFileSync(ROOT + '/js/demo-data.js', 'utf8'), demoJs = fs.readFileSync(ROOT + '/js/demo.js', 'utf8');
+const stubs = `window.HTMLMediaElement.prototype.play = function () { return Promise.resolve(); }; window.HTMLMediaElement.prototype.pause = function () {};
+window.fetch = () => Promise.resolve({ ok: true });
 window.Chart = function (cv, cfg) { window.__chart = cfg; this.destroy = () => {}; this.update = () => {}; };`;
 const page = strip.replace(/<script src="js\/(?:data|app)\.js[^"]*"><\/script>/g, '')
-  .replace('</body>', () => `<script>${stubs}</script><script>${leaflet.replace(/<\/script>/g, '<\\/script>')}</script><script>L.Browser.svg = true; L.Browser.canvas = false;</script><script>${data}</script><script>${app}</script></body>`);
+  .replace('</body>', () => `<script>${stubs}</script><script>${leaflet.replace(/<\/script>/g, '<\\/script>')}</script><script>L.Browser.svg = true; L.Browser.canvas = false;</script><script>${data}</script><script>${app}</script><script>${demoData}</script><script>${demoJs}</script></body>`);
 const errors = [], vc = new VirtualConsole();
 vc.on('jsdomError', e => errors.push('jsdomError: ' + String(e.message).split('\n')[0]));
 vc.on('error', (...a) => errors.push('console.error: ' + a.join(' ').slice(0, 220)));
@@ -80,6 +82,22 @@ check('an anchor link scrolls to its section', calls[0] === claims * 1000 - 64 &
 // an era pill jumps to a step and activates it at once
 calls.length = 0; d.querySelector('.era-pill[data-era="chintz"]').click();
 check('an era pill goes to its first step and the map follows', d.querySelector('.story-step.is-active').dataset.phase === 'chintz' && calls.length === 1);
+
+// ── the narrated demo (audio stubbed): launcher, Start, the card, next, close
+try {
+  w.PrintDemo.open();
+  check('the demo launcher opens', !!d.querySelector('.demo-launch') && d.querySelectorAll('.demo-chapter-btn').length === 4, d.querySelector('.demo-launch h2') && d.querySelector('.demo-launch h2').textContent);
+  d.querySelector('.demo-launch [data-act="start"]').click();
+  const card = d.querySelector('.demo-card');
+  check('Start runs step 1 with its card, spotlight and controls', !!card && /1 of 14/.test(card.textContent) && !!d.querySelector('.demo-spot') && card.querySelectorAll('.demo-pill').length === 4);
+  card.querySelector('[data-act="next"]').click();
+  check('Next moves to step 2', /2 of 14/.test(d.querySelector('.demo-card').textContent));
+  const dock = w.PrintDemo._placeCard(null, { w: 400, h: 200 }, { w: 1280, h: 800 }, false, 56);
+  const below = w.PrintDemo._placeCard({ x: 100, y: 100, w: 300, h: 100 }, { w: 400, h: 200 }, { w: 1280, h: 800 }, false, 56);
+  check('the card docks bottom-centre with nothing to point at, and sits beside a target otherwise', dock.y === 588 && dock.x === 440 && (below.y >= 214 || below.x >= 414), JSON.stringify([dock, below]));
+  w.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'Escape' }));
+  check('Esc closes it and removes its elements', !d.querySelector('.demo-card') && !d.querySelector('.demo-spot') && !d.querySelector('.demo-backdrop'));
+} catch (e) { check('the narrated demo runs', false, String(e)); }
 console.log(fails ? `\nSCROLL ASSIST: ${fails} check(s) failed` : '\nSCROLL ASSIST: all checks passed');
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no runtime errors captured');
 process.exit(0);

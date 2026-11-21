@@ -1,0 +1,196 @@
+{
+  "voice": {
+    "engine": "Kokoro-82M",
+    "voice": "af_heart",
+    "speed": 1.0
+  },
+  "title": "The Repeating Hand, narrated",
+  "lede": "One carved shape, pressed again and again into cloth. A king from the Indus Valley wears a cloak that might have been printed, and nobody has proved it. This tour follows the evidence, and says exactly how much we know.",
+  "chapters": [
+    {
+      "id": "question",
+      "title": "The question"
+    },
+    {
+      "id": "king",
+      "title": "The king"
+    },
+    {
+      "id": "history",
+      "title": "The history"
+    },
+    {
+      "id": "use",
+      "title": "Use it"
+    }
+  ],
+  "pronounce": {
+    "Mohenjo-daro": "Moh-hen-joh Dah-roh",
+    "Mehrgarh": "Mair-gar",
+    "Harappa": "Huh-rap-uh",
+    "trefoils": "tree-foils",
+    "Gujarat": "Goo-jah-raht",
+    "Quseir": "Koo-seer",
+    "GitHub": "Git-Hub"
+  },
+  "steps": [
+    {
+      "id": "purpose",
+      "chapter": "question",
+      "title": "A king in a patterned cloak",
+      "spot": "hero-lede",
+      "text": "About four thousand years ago, a king in the Indus Valley was carved in soapstone, wearing a cloak of three-leaf patterns. Was that cloth printed with a carved block? Nobody knows. This site follows the evidence.",
+      "scene": {
+        "section": "hero"
+      }
+    },
+    {
+      "id": "what",
+      "chapter": "question",
+      "title": "An open-data history",
+      "spot": "hero-stats",
+      "text": "It is an open-data history of block printing, the oldest way to copy a pattern. Every claim carries its source, and every quote is checked.",
+      "scene": {
+        "section": "hero"
+      }
+    },
+    {
+      "id": "model",
+      "chapter": "king",
+      "title": "Meet the Priest-King",
+      "spot": "viewer",
+      "text": "A three-D model of his soapstone bust, built from museum photographs. Drag to turn it. It is an interpretation, not a scan.",
+      "scene": {
+        "variant": "stone",
+        "hotspot": null,
+        "orbit": "-40deg 80deg 0.38m",
+        "sweep": [
+          -40,
+          40
+        ]
+      }
+    },
+    {
+      "id": "dots",
+      "chapter": "king",
+      "title": "What the sculpture shows",
+      "spot": "hotspots",
+      "text": "Tap the dots to see what survives: the headband, the spiral ear, the beard, and the cloak of trefoils, each with a museum quote.",
+      "scene": {
+        "variant": "stone",
+        "hotspot": "hs-cloak"
+      }
+    },
+    {
+      "id": "printed",
+      "chapter": "king",
+      "title": "Stone, or printed cloth?",
+      "spot": "surface",
+      "text": "Now switch the stone to printed cloth. It is an illustration of the hypothesis, madder red on cotton. It is not evidence, and it says so.",
+      "scene": {
+        "variant": "printed",
+        "hotspot": null,
+        "orbit": "-25deg 76deg 0.32m",
+        "sweep": [
+          -25,
+          25
+        ]
+      }
+    },
+    {
+      "id": "ledger",
+      "chapter": "king",
+      "title": "The honest part",
+      "spot": "ledger",
+      "text": "Every claim is sorted: evidenced, reported, not found, or imagined. No printing block from Mohenjo-daro appears in our sources, so that row says not found.",
+      "scene": {
+        "variant": "stone",
+        "hotspot": null
+      }
+    },
+    {
+      "id": "process",
+      "chapter": "history",
+      "title": "How a block print is made",
+      "spot": "process",
+      "text": "How is a block print made? Carve a block, print a mordant or a resist, dye the cloth, then wash. The steps come from museum records.",
+      "scene": {}
+    },
+    {
+      "id": "map",
+      "chapter": "history",
+      "title": "From cotton to calico",
+      "spot": "map",
+      "text": "Then scroll through the history: from the first cotton at Mehrgarh, to carved blocks in Egypt, Indian cottons found in Cairo, and the calico that changed Europe.",
+      "scene": {
+        "story": [
+          "mehrgarh-cotton-fibres",
+          "egypt-printing-block-10c",
+          "quseir-fustat-block-prints",
+          "european-calico-1690s"
+        ]
+      }
+    },
+    {
+      "id": "scrub",
+      "chapter": "history",
+      "title": "When and where",
+      "spot": "spread",
+      "text": "Every stop appears by region and date. Drag the slider, and whatever had not yet happened disappears.",
+      "scene": {
+        "scrubSweep": [
+          1000,
+          330
+        ]
+      }
+    },
+    {
+      "id": "blue",
+      "chapter": "history",
+      "title": "The blue thread",
+      "spot": "blue",
+      "text": "Printed cloth is usually two colors: madder red and indigo blue. Cards from our indigo study show where the two stories meet.",
+      "scene": {
+        "scrub": 1000
+      }
+    },
+    {
+      "id": "claims",
+      "chapter": "history",
+      "title": "Claims that fail",
+      "spot": "claims",
+      "text": "Some popular claims do not hold up. Does the shawl prove Indus printing? Not shown. See which fail the sources, and why.",
+      "scene": {}
+    },
+    {
+      "id": "audit",
+      "chapter": "history",
+      "title": "Every source, audited",
+      "spot": "audit",
+      "text": "Every picture is rights-cleared, and the audit counts each claim as confirmed, pending or derived, so you can see what is solid and what is still a lead.",
+      "scene": {}
+    },
+    {
+      "id": "assist",
+      "chapter": "use",
+      "title": "Find your way",
+      "spot": "scrollassist",
+      "text": "Use the arrows to jump between sections or step through the timeline. The menu lists everything, and the sun and moon switch the theme.",
+      "scene": {
+        "section": "about"
+      }
+    },
+    {
+      "id": "open",
+      "chapter": "use",
+      "title": "Free and open source",
+      "spot": "footer",
+      "text": "The Repeating Hand is free and open source. The code, the data and the three-D model live in a public GitHub repo. Fork it, reuse it, and tell a different history.",
+      "link": {
+        "href": "https://github.com/fritzhand/history-of-block-printing",
+        "label": "Open the GitHub repo"
+      },
+      "scene": {}
+    }
+  ]
+}

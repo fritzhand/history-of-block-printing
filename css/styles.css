@@ -225,3 +225,7 @@ details.srcs > summary { cursor: pointer; color: var(--indigo); font-size: 0.85r
 .section-nav-btn svg { width: 20px; height: 20px; }
 .section-nav-btn.is-disabled { opacity: 0.32; pointer-events: none; }
 @media (max-width: 600px) { .section-nav { right: 14px; bottom: 14px; } .section-nav-btn { width: 44px; height: 44px; } }
+
+/* maps: keep Leaflet's internal z-indexes inside the map */
+.map { isolation: isolate; }
+.foot-repo { margin: 0 0 6px; } .foot-repo a { color: #f08a70; }
