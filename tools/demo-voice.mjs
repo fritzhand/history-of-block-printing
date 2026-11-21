@@ -6,7 +6,7 @@
  *   node tools/demo-voice.mjs --check         list what is stale; exit 1 if anything is
  *   node tools/demo-voice.mjs --all           speak every line again
  *   node tools/demo-voice.mjs --only a,b      speak those ids again
- *   --voicestudio DIR   a checkout whose .venv has kokoro and soundfile (default $VOICESTUDIO, else ~/VoiceStudio)
+ *   --voice-env DIR     a folder whose .venv has kokoro and soundfile (default $VOICE_ENV, else this repo's own .venv)
  *   --no-verify         skip the transcription check
  *   --script / --out / --manifest / --bitrate   other scripts (the reel uses these); defaults are the demo's
  *
@@ -41,9 +41,9 @@ if (argv.includes('--check')) {
 }
 if (!stale.length) { console.log('voice: every line has a current take'); process.exit(0); }
 
-const VS = (opt('--voicestudio') || process.env.VOICESTUDIO || join(homedir(), 'VoiceStudio')).replace(/^~/, homedir());
+const VS = (opt('--voice-env') || process.env.VOICE_ENV || ROOT).replace(/^~/, homedir());
 const py = join(VS, '.venv', 'bin', 'python');
-if (!existsSync(py)) { console.error(`✗ no Python environment at ${py}`); process.exit(1); }
+if (!existsSync(py)) { console.error(`✗ no Python environment at ${py}: create one with kokoro and soundfile in it, or point at one with --voice-env (see REUSE.md, section 0)`); process.exit(1); }
 
 const work = mkdtempSync(join(tmpdir(), 'voice-')), wavs = join(work, 'wav');
 writeFileSync(join(work, 'lines.json'), JSON.stringify(stale.map(s => ({ id: s.id, text: s.say }))));

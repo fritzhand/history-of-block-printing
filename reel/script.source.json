@@ -1,0 +1,43 @@
+{
+  "voice": {
+    "engine": "Kokoro-82M",
+    "voice": "af_heart",
+    "speed": 1.0
+  },
+  "title": "The Repeating Hand, the reel",
+  "pronounce": {
+    "Mohenjo-daro": "Moh-hen-joh Dah-roh",
+    "Mehrgarh": "Mair-gar",
+    "Harappa": "Huh-rap-uh",
+    "trefoils": "tree-foils",
+    "Gujarat": "Goo-jah-raht",
+    "Quseir": "Koo-seer",
+    "GitHub": "Git-Hub"
+  },
+  "steps": [
+    {
+      "id": "hook",
+      "text": "About four thousand years ago, a king in the Indus Valley was carved wearing a cloak of three-leaf patterns. Was that cloth printed with a carved block? Nobody knows."
+    },
+    {
+      "id": "what",
+      "text": "This is The Repeating Hand: an open-data history of block printing, the oldest way to copy a pattern. Every claim carries its source."
+    },
+    {
+      "id": "king",
+      "text": "Meet the Priest-King in three-D, rebuilt from museum photographs. Turn him around, then switch the stone to printed cloth. That is an illustration of the idea, not evidence."
+    },
+    {
+      "id": "proof",
+      "text": "Every claim is sorted by how well it holds up: evidenced, reported, not found, or imagined. Nothing is passed off as settled."
+    },
+    {
+      "id": "history",
+      "text": "Then follow the craft across the map: the first cotton at Mehrgarh, carved blocks in Egypt, Indian cottons found in Cairo, and the calico that changed Europe."
+    },
+    {
+      "id": "open",
+      "text": "And it is free and open source. The code, the data and the three-D model are all in a public GitHub repo. Fork it, reuse it, and tell a different history."
+    }
+  ]
+}

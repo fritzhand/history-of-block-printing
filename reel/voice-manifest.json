@@ -1,0 +1,33 @@
+{
+  "takes": {
+    "history": {
+      "hash": "5ca31bcd60",
+      "seconds": 10.03
+    },
+    "hook": {
+      "hash": "d4ee8b0eb9",
+      "seconds": 10.23
+    },
+    "king": {
+      "hash": "6ff953cad8",
+      "seconds": 11.23
+    },
+    "open": {
+      "hash": "8e895d452a",
+      "seconds": 10.65
+    },
+    "proof": {
+      "hash": "7922980319",
+      "seconds": 8.63
+    },
+    "what": {
+      "hash": "34dc6504b2",
+      "seconds": 8.78
+    }
+  },
+  "voice": {
+    "engine": "Kokoro-82M",
+    "voice": "af_heart",
+    "speed": 1
+  }
+}

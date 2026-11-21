@@ -1,0 +1,55 @@
+{
+  "voice": {
+    "engine": "Kokoro-82M",
+    "voice": "af_heart",
+    "speed": 1
+  },
+  "title": "The Repeating Hand, the reel",
+  "pronounce": {
+    "Mohenjo-daro": "Moh-hen-joh Dah-roh",
+    "Mehrgarh": "Mair-gar",
+    "Harappa": "Huh-rap-uh",
+    "trefoils": "tree-foils",
+    "Gujarat": "Goo-jah-raht",
+    "Quseir": "Koo-seer",
+    "GitHub": "Git-Hub"
+  },
+  "steps": [
+    {
+      "id": "hook",
+      "text": "About four thousand years ago, a king in the Indus Valley was carved wearing a cloak of three-leaf patterns. Was that cloth printed with a carved block? Nobody knows.",
+      "say": "About four thousand years ago, a king in the Indus Valley was carved wearing a cloak of three-leaf patterns. Was that cloth printed with a carved block? Nobody knows.",
+      "hash": "d4ee8b0eb9"
+    },
+    {
+      "id": "what",
+      "text": "This is The Repeating Hand: an open-data history of block printing, the oldest way to copy a pattern. Every claim carries its source.",
+      "say": "This is The Repeating Hand: an open-data history of block printing, the oldest way to copy a pattern. Every claim carries its source.",
+      "hash": "34dc6504b2"
+    },
+    {
+      "id": "king",
+      "text": "Meet the Priest-King in three-D, rebuilt from museum photographs. Turn him around, then switch the stone to printed cloth. That is an illustration of the idea, not evidence.",
+      "say": "Meet the Priest-King in three-D, rebuilt from museum photographs. Turn him around, then switch the stone to printed cloth. That is an illustration of the idea, not evidence.",
+      "hash": "6ff953cad8"
+    },
+    {
+      "id": "history",
+      "text": "Then follow the craft across the map: the first cotton at Mehrgarh, carved blocks in Egypt, Indian cottons found in Cairo, and the calico that changed Europe.",
+      "say": "Then follow the craft across the map: the first cotton at Mair-gar, carved blocks in Egypt, Indian cottons found in Cairo, and the calico that changed Europe.",
+      "hash": "5ca31bcd60"
+    },
+    {
+      "id": "proof",
+      "text": "Every claim is sorted by how well it holds up: evidenced, reported, not found, or imagined. Nothing is passed off as settled.",
+      "say": "Every claim is sorted by how well it holds up: evidenced, reported, not found, or imagined. Nothing is passed off as settled.",
+      "hash": "7922980319"
+    },
+    {
+      "id": "open",
+      "text": "And it is free and open source. The code, the data and the three-D model are all in a public GitHub repo. Fork it, reuse it, and tell a different history.",
+      "say": "And it is free and open source. The code, the data and the three-D model are all in a public Git-Hub repo. Fork it, reuse it, and tell a different history.",
+      "hash": "8e895d452a"
+    }
+  ]
+}

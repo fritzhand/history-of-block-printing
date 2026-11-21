@@ -10,10 +10,12 @@
 | Research layer | **first pass** | 22 mapped events, 6 carried from the indigo study; 70 CONFIRMED, 5 PENDING, 6 DERIVED source objects, 24 institutions |
 | Quote verification | done | `tools/check-quotes.py` re-reads every CONFIRMED source; all pass (a wrong Quseir quote was caught and fixed) |
 | Data build and validator | done | `tools/build-data.mjs`, `tools/validate-data.mjs`: no errors |
-| 3D model | done | `assets/models/priest-king-draco.glb` (2.8 MB, 345,600 triangles, stone + printed variants); glTF validator: no errors |
+| 3D model | done | `assets/models/priest-king-draco.glb` (2.1 MB, Draco + WebP, 345,600 triangles, stone + printed variants); glTF validator: no errors |
 | Hero video | **placeholder** | A 12 s Blender sweep (stone dissolving to printed cloth). The real reconstruction video is to be generated from `prompts/HERO_VIDEO_PROMPTS.md` |
 | Soundtrack | done | "Temple" by Jean du Voyage, rights confirmed by the owner 2026-11-21; terms to be recorded in `CONTENT_LICENSE.md` |
 | Narrated demo | **built and tested** | `?demo` / the Demo button / `/tour/`. 14 steps, 2.2 min of narration (Kokoro `af_heart`), every take verified by transcription. Tested in real Chrome at desktop and phone size: voice, auto-advance, scroll, spotlight, card placement, model sweeps, map stops, slider, controls, close/reset, no errors. Not yet listened to by a person: the check catches a wrong word, not a wrong emphasis |
+| The reel | **built** | `reel/`: 65 s, 1080 × 1920, 30 fps, −14.0 LUFS / −1.5 dBTP, recorded from the live site on a virtual clock (1,954 frames, none taken mid-load, no page errors). Kokoro `af_heart` voice, captions timed to the words, music bed, end card naming the GitHub repo. Cover and contact sheet checked by eye. **Not yet listened to by a person**; the flash check lists a 0.3 s scroll past bright photos (steps under 10 % luminance) |
+| Reuse docs | done | `AGENTS.md` (map of every feature, workflow and engine) and `REUSE.md` (voice pipeline, tour overlay, reel engine: requirements, wiring, troubleshooting) |
 | Picture archive | 25 images | 19 new (13 CC0, 6 Commons) + 6 carried from the indigo study. Adinkra cloth record present, file not yet mirrored (rate limit) |
 | Page (HTML / CSS / JS) | built | Hero, 3D viewer, ledger, process, timeline map, spread chart, blue thread, claims, archive, source audit |
 | Browser testing | **partial** | Simulated DOM (jsdom + real Leaflet): all sections render, interactions respond, scroll assist passes ten checks. In a real browser (desktop Chromium): the 3D model loads, both surfaces render (stone 0% madder red, printed 8%), hotspots work. **Not yet checked: the phone layout, the map and chart in a real browser** |

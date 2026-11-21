@@ -12,3 +12,4 @@ assets/audio/temple.mp3
 
 __pycache__/
 *.pyc
+reel/build/

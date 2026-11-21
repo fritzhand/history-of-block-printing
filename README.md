@@ -32,6 +32,7 @@ Every asset path is relative, so the site works unchanged under the `/history-of
 | Picture archive | 25 rights-cleared images, each with its licence read from its own record |
 | Source audit | Every source object, its quote and its status, counted live |
 | Narrated demo | A **Demo** button (also `?demo` and `/tour/`): a launcher card with a short brief, then a spotlight tour with a voice. The page scrolls, the 3D model turns, the surface switches, the map visits its stops and the slider sweeps, on cue. 14 steps, about 2½ minutes; the voice is Kokoro-82M (open source, Apache-2.0) |
+| The reel | [`reel/`](./reel/README.md): a 65-second vertical video (1080 × 1920) recorded from this page, frame by frame: the history of block printing, the 3D Priest-King, the purpose of the site, and an end card that says it is free and open source. Same open-source voice, captions timed to the words, music, −14 LUFS. Rebuilt from a script, so it can be redone when the site changes |
 | Scroll assist | A floating up/down pair, as on the other studies: it steps section by section and step by step through the timeline (the map flies once to each step, not through the ones it passes), and anchor jumps re-assert their target while the page settles |
 | Light / dark theme | Indigo night and unbleached cotton, remembered between visits |
 
@@ -72,6 +73,7 @@ node tools/media-roll.mjs            # regenerate the media roll in CONTENT_LICE
 python3 tools/fetch-text.py URL --check "quote"   # is this sentence really on that page?
 python3 tools/build-hero.py          # assemble the hero video from clips, plus the soundtrack bed
 python3 tools/make-icons.py          # favicon, touch icon, share card
+# the reel (voice, timing, recording, assembly): see reel/README.md
 npm i --no-save jsdom@24 leaflet@1.9.4 && node tools/smoke-test.mjs .   # run the page in a simulated DOM
 ```
 
@@ -84,6 +86,14 @@ npm i --no-save jsdom@24 leaflet@1.9.4 && node tools/smoke-test.mjs .   # run th
 - `prompts/3D_MODEL_PROMPTS.md`: prompts and a checklist for AI image-to-3D tools, and what went wrong in the
   one Sketchfab model tried.
 - `prompts/reference/`: neutral-background renders of both surfaces, for use as reference images.
+
+## Reusing the engines
+
+Three parts are separable from this site and are written up so you can lift them: the **voice pipeline** (an open-source
+narrator that re-records only the lines that changed), the **narrated tour overlay** (a Demo button and a spotlight
+tour with a voice), and the **reel engine** (a vertical video recorded frame by frame from the live page). See
+[`REUSE.md`](./REUSE.md) for requirements, wiring and troubleshooting, and [`AGENTS.md`](./AGENTS.md) for the map of
+everything else.
 
 ## Citation standard
 
@@ -100,6 +110,8 @@ Every claim carries a source object `{ institution, title, date, url, quote, not
 
 | File | Purpose |
 |---|---|
+| [`AGENTS.md`](./AGENTS.md) | Start here if you are about to change the repo: every feature, workflow and engine, the commands, the rules |
+| [`REUSE.md`](./REUSE.md) | How to reuse the voice pipeline, the narrated tour overlay and the reel engine in another project |
 | [`ARCHIVAL_RESEARCH_PROMPT_BLOCKPRINTING.md`](./ARCHIVAL_RESEARCH_PROMPT_BLOCKPRINTING.md) | Research brief for the next evidence pass |
 | [`PROGRESS.md`](./PROGRESS.md) | Done / not-done checkpoint for resume |
 | [`research/FIRST-PASS-NOTES.md`](./research/FIRST-PASS-NOTES.md) | Working notes from the first research pass |
