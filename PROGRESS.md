@@ -16,7 +16,7 @@
 | Picture archive | 25 images | 19 new (13 CC0, 6 Commons) + 6 carried from the indigo study. Adinkra cloth record present, file not yet mirrored (rate limit) |
 | Page (HTML / CSS / JS) | built | Hero, 3D viewer, ledger, process, timeline map, spread chart, blue thread, claims, archive, source audit |
 | Browser testing | **not done** | Simulated DOM only (jsdom + real Leaflet): all sections render, interactions respond, no errors. Chart.js is stubbed and model-viewer is not loaded there |
-| Repo / publishing | not done | No git repository, no commit, nothing pushed. The canonical URL in `index.html` assumes `fritzhand/history-of-block-printing` |
+| Repo / publishing | **published** | Public repo `fritzhand/history-of-block-printing`, served by GitHub Pages from `main`. (Vercel was considered; the only scope the CLI could use was an employer's team, so Pages was chosen) |
 
 ## What the research found
 
@@ -41,5 +41,4 @@
 1. **Open it in a real browser** and fix what it shows (model-viewer decoding, hotspot positions, the sticky map on phones).
 2. **Generate the hero video** from the prompts; run `python3 tools/build-hero.py`.
 3. **Close the Tier 1 and Tier 2 gaps** in `ARCHIVAL_RESEARCH_PROMPT_BLOCKPRINTING.md`.
-4. `git init`, set the author per repo, create `fritzhand/history-of-block-printing`, push, enable Pages.
-5. Record the soundtrack's licence terms in `CONTENT_LICENSE.md`; mirror the Adinkra image.
+4. Record the soundtrack's licence terms in `CONTENT_LICENSE.md`; mirror the Adinkra image.

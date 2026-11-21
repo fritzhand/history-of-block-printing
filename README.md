@@ -14,8 +14,8 @@ itself a fork of [`fritzhand/history-of-indigo`](https://github.com/fritzhand/hi
 architecture and citation standard, a different subject. Six events and six images are carried over from the
 indigo study, with their sources unchanged.
 
-**Intended address:** <https://fritzhand.github.io/history-of-block-printing/> (GitHub Pages, repository root).
-Not yet published. Every asset path is relative. No cookies, no analytics.
+**Live:** <https://fritzhand.github.io/history-of-block-printing/> (GitHub Pages, from the `main` branch, repository root).
+Every asset path is relative, so the site works unchanged under the `/history-of-block-printing/` subpath. No cookies, no analytics.
 
 ## What you get
 
